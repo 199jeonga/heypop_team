@@ -6,6 +6,8 @@ const media: { [key: string]: string } = {
     tab: `@media screen and (min-width:719px) and (max-width: 1024px)`,
     lap: `@media screen and (min-width:1023px) and (max-width: 1440px)`,
     pc: `@media screen and (min-width: 1439px)`,
+    maxHeader: `@media screen and (min-width: 1440px)`,
+    minHeader: `@media screen and (max-width: 1439px)`,
 }
 
 // color외 자주 사용할 코드
