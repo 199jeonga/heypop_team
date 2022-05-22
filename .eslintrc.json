@@ -18,7 +18,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "plugins": ["react", "@typescript-eslint"],
     "rules": {
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
         "import/extensions": [
@@ -30,7 +30,7 @@
             }
         ],
         "react/prop-types": "off",
-        "prettier/prettier": ["error", { "endOfLine": "auto" }] //crlf이슈 https://gwpaeng.tistory.com/350
+        "prettier/prettier": ["error", { "endOfLine": "auto" }]
     },
     "settings": {
         "import/resolver": {
