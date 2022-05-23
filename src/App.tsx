@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import GlobalStyles from './GlobalStyles'
-import Home from './routes/Home'
+import Home from 'routes/Home'
+import GlobalStyles from 'GlobalStyles'
 
 function App() {
     return (

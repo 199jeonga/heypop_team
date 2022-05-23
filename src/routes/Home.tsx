@@ -1,18 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import HomeViewbox from 'components/HomeViewbox'
-import Header from 'components/Header/Header'
-
-const HomeDiv = styled.div`
-    /* color: ${(props) => props.theme.color_point}; */
-`
+import Viewbox from 'pages/home/viewbox/Viewbox'
+import HeaderBox from 'pages/common/header/HeaderBox'
 
 function Home() {
     return (
-        <HomeDiv>
-            <Header />
-            <HomeViewbox />
-        </HomeDiv>
+        <div>
+            <HeaderBox />
+            <Viewbox />
+        </div>
     )
 }
 

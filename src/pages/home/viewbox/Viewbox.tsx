@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function HomeViewbox() {
-    const Hv = styled.div`
+function Viewbox() {
+    const StyledDiv = styled.div`
         display: flex;
         justify-content: space-between;
         width: 100%;
         height: 28vw;
         padding-top: 55px;
         max-height: 300px;
-        max-width: 1440px;
+        max-width: 1180px;
         ${({ theme }) => theme.styles.center}
         ${({ theme }) => theme.media.lap} {
             padding: 55px 130px 0;
@@ -24,7 +24,7 @@ function HomeViewbox() {
             padding: 55px 0 0;
         }
     `
-    const HvP = styled.p`
+    const StyledP = styled.p`
         width: 100%;
         height: 25px;
         line-height: 25px;
@@ -46,7 +46,7 @@ function HomeViewbox() {
             color: ${({ theme }) => theme.colors.black};
         }
     `
-    const HvImg = styled.img`
+    const StyledImg = styled.img`
         width: auto;
         max-width: 380px;
         height: auto;
@@ -55,17 +55,18 @@ function HomeViewbox() {
             width: 50.667vw;
         }
     `
+
     return (
-        <Hv>
-            <HvP>
+        <StyledDiv>
+            <StyledP>
                 <span>DISCOVER YOUR FAVORITES</span>
                 <span>WITH CREATOR, BY CURATOR, FROM BRAND</span>
-            </HvP>
-            <HvImg
+            </StyledP>
+            <StyledImg
                 src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
                 alt="heypop"
             />
-        </Hv>
+        </StyledDiv>
     )
 }
-export default HomeViewbox
+export default Viewbox

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const header = () => {
+function HeaderBox() {
     const HeaderWrapper = styled.div`
         background: ${({ theme }) => theme.colors.black};
         z-index: 20000;
@@ -143,4 +143,4 @@ const header = () => {
     )
 }
 
-export default header
+export default HeaderBox
