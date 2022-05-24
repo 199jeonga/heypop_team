@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 function HeaderBox() {
@@ -7,7 +7,7 @@ function HeaderBox() {
         z-index: 20000;
         height: 40px;
         padding: 0px;
-        color: white;
+        color: ${({ theme }) => theme.colors.white};
     `
     const HeaderContainer = styled.div`
         max-width: 1440px;
@@ -60,7 +60,8 @@ function HeaderBox() {
         display: inline-block;
     `
     const SubNav = styled.ul`
-        color: white;
+        font-size: 15px;
+        color: ${({ theme }) => theme.colors.white};
         position: absolute;
         font-weight: bold;
         cursor: pointer;
@@ -74,7 +75,12 @@ function HeaderBox() {
             justify-content: space-between;
             align-items: flex-end;
             width: 100%;
-            padding-left: 50px;
+            padding-left: 70px;
+        }
+        li {
+            &:first-child {
+                padding-left: 10px;
+            }
         }
     `
     const MainNavWrap = styled.div`
@@ -106,9 +112,26 @@ function HeaderBox() {
             display: none;
         }
     `
-
+    const BackgroundBlur = styled.div`
+        position: fixed;
+        z-index: 1;
+        top: 70px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000;
+        -moz-opacity: 0.3;
+        -khtml-opacity: 0.3;
+        -webkit-opacity: 0.3;
+        opacity: 0.3;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+        filter: alpha(opacity=30);
+    `
+    const [showBackgroundBlur, setShowBackgroundBlur] = useState(false)
+    const blurToggle = () => setShowBackgroundBlur(!showBackgroundBlur)
     return (
         <HeaderWrapper>
+            {showBackgroundBlur && <BackgroundBlur />}
             <HeaderContainer>
                 <HeaderRow>
                     <HomeIcon
@@ -124,6 +147,7 @@ function HeaderBox() {
                                 <Icon
                                     alt="search"
                                     src={`${process.env.PUBLIC_URL}/images/icon_navi_search.png`}
+                                    onClick={blurToggle}
                                 />
                                 SEARCH
                             </NavList>
