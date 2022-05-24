@@ -16,6 +16,10 @@ function HeaderBox() {
         padding-left: 130px;
         margin-right: auto;
         margin-left: auto;
+        ${({ theme }) => theme.media.mob} {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
     `
     const HeaderRow = styled.div`
         position: relative;
@@ -24,53 +28,66 @@ function HeaderBox() {
     `
     const MenuNav = styled.div`
         width: 100%;
-        ${({ theme }) => theme.media.maxHeader} {
-            display: inline-block;
-        }
-        ${({ theme }) => theme.media.minHeader} {
-            display: inline-block;
-        }
+        display: inline-block;
     `
     const Icon = styled.img`
         width: 24px;
         height: 24px;
-        top: 5px;
+        top: 8px;
         position: relative;
         cursor: pointer;
     `
     const HomeIcon = styled(Icon)`
         position: absolute;
         left: -30px;
+        ${({ theme }) => theme.media.mob} {
+            left: 10px;
+        }
     `
     const InstagramIcon = styled(Icon)`
         position: absolute;
         right: -30px;
-        ${({ theme }) => theme.media.minHeader} {
-            display: none;
+        display: none;
+        ${({ theme }) => theme.media.pc} {
+            display: inline-block;
         }
     `
     const MainNav = styled.ul`
-        ${({ theme }) => theme.media.minHeader} {
-            display: none;
-        }
         font-size: 33px;
         font-weight: bold;
         width: 100%;
-        display: inline-block;
         cursor: pointer;
+        display: inline-block;
     `
     const SubNav = styled.ul`
         color: white;
         position: absolute;
         font-weight: bold;
         cursor: pointer;
-        ${({ theme }) => theme.media.minHeader} {
-            right: 0;
-            top: 0;
+        top: 0;
+        right: 0;
+        ${({ theme }) => theme.media.pc} {
+            left: 0;
+        }
+        ${({ theme }) => theme.media.mob} {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            padding-left: 50px;
         }
     `
     const MainNavWrap = styled.div`
         text-align: right;
+        ${({ theme }) => theme.media.mob} {
+            display: none;
+        }
+        ${({ theme }) => theme.media.tab} {
+            display: none;
+        }
+        ${({ theme }) => theme.media.lap} {
+            display: none;
+        }
     `
     const NavList = styled.li`
         display: inline-block;
@@ -85,7 +102,7 @@ function HeaderBox() {
         }
     `
     const MainNavListMenu = styled(NavList)`
-        ${({ theme }) => theme.media.maxHeader} {
+        ${({ theme }) => theme.media.pc} {
             display: none;
         }
     `
