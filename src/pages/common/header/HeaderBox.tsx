@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {
-    const HeaderWrapper = styled.div`
+    const HeaderArea = styled.div`
         background: ${({ theme }) => theme.colors.black};
         z-index: 20000;
         height: 40px;
         padding: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         color: ${({ theme }) => theme.colors.white};
     `
-    const HeaderContainer = styled.div`
+    const HeaderInnerDiv = styled.div`
         max-width: 1440px;
         width: 100%;
         padding-right: 130px;
@@ -21,30 +26,30 @@ function HeaderBox() {
             padding-left: 15px;
         }
     `
-    const HeaderRow = styled.div`
+    const HeaderMenuPartDiv = styled.div`
         position: relative;
         margin-right: -10px;
         margin-left: -10px;
     `
-    const MenuNav = styled.div`
+    const MenuNavUlDiv = styled.div`
         width: 100%;
         display: inline-block;
     `
-    const Icon = styled.img`
+    const IconImg = styled.img`
         width: 24px;
         height: 24px;
         top: 8px;
         position: relative;
         cursor: pointer;
     `
-    const HomeIcon = styled(Icon)`
+    const HomeIconImg = styled(IconImg)`
         position: absolute;
         left: -30px;
         ${({ theme }) => theme.media.mob} {
             left: 10px;
         }
     `
-    const InstagramIcon = styled(Icon)`
+    const InstagramIconImg = styled(IconImg)`
         position: absolute;
         right: -30px;
         display: none;
@@ -52,14 +57,14 @@ function HeaderBox() {
             display: inline-block;
         }
     `
-    const MainNav = styled.ul`
+    const MainNavUl = styled.ul`
         font-size: 33px;
         font-weight: bold;
         width: 100%;
         cursor: pointer;
         display: inline-block;
     `
-    const SubNav = styled.ul`
+    const SubNavUl = styled.ul`
         font-size: 15px;
         color: ${({ theme }) => theme.colors.white};
         position: absolute;
@@ -83,7 +88,7 @@ function HeaderBox() {
             }
         }
     `
-    const MainNavWrap = styled.div`
+    const MainNavDiv = styled.div`
         text-align: right;
         ${({ theme }) => theme.media.mob} {
             display: none;
@@ -95,11 +100,11 @@ function HeaderBox() {
             display: none;
         }
     `
-    const NavList = styled.li`
+    const NavListLi = styled.li`
         display: inline-block;
         margin-right: 16px;
     `
-    const MainNavList = styled(NavList)`
+    const MainNavListLi = styled(NavListLi)`
         margin-right: 3px;
         &:hover {
             color: ${({ theme }) => theme.colors.point};
@@ -107,12 +112,12 @@ function HeaderBox() {
             opacity: 1;
         }
     `
-    const MainNavListMenu = styled(NavList)`
+    const MainNavListMenuLi = styled(NavListLi)`
         ${({ theme }) => theme.media.pc} {
             display: none;
         }
     `
-    const BackgroundBlur = styled.div`
+    const BackgroundBlurDiv = styled.div`
         position: fixed;
         z-index: 1;
         top: 70px;
@@ -127,60 +132,183 @@ function HeaderBox() {
         -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
         filter: alpha(opacity=30);
     `
-    const [showBackgroundBlur, setShowBackgroundBlur] = useState(false)
-    const blurToggle = () => setShowBackgroundBlur(!showBackgroundBlur)
+    const SearchAreaDiv = styled.div`
+        padding-top: 0;
+        z-index: 10;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 40px;
+        background: #000;
+    `
+    const SearchInnerDiv = styled.div`
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    `
+    const SearchInputPartDiv = styled.div`
+        padding: 70px 90px;
+        ${({ theme }) => theme.media.pc} {
+            padding: 70px 130px;
+        }
+        ${({ theme }) => theme.media.mob} {
+            padding: 70px 0;
+        }
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+    `
+    const SearchInputInnerDiv = styled.div`
+        padding: 0px 20px 30px;
+        margin: 0 auto;
+        flex: 0 0 100%;
+        max-width: 100%;
+        ${({ theme }) => theme.media.pc} {
+            flex: 0 0 25%;
+            max-width: 50%;
+        }
+        ${({ theme }) => theme.media.lap} {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    `
+    const SearchInput = styled.input`
+        width: 100%;
+        border-bottom: 2px solid #fff !important;
+        padding-bottom: 20px;
+        background-image: url(${process.env
+            .PUBLIC_URL}/images/icon_navi_search.png) !important;
+        background-size: 40px 40px !important;
+        background-repeat: no-repeat !important;
+        background-position: 0 -5px !important;
+        padding-left: 50px;
+        font-weight: 700;
+        font-size: 18px;
+        color: #fff;
+        border: none;
+        background: transparent;
+    `
+    const SearchInnerContainerDiv = styled.div`
+        ${({ theme }) => theme.media.pc} {
+            display: flex;
+        }
+        ${({ theme }) => theme.media.lap} {
+            display: flex;
+        }
+    `
+    const SearchInnerContentDiv = styled.div`
+        display: inline-block;
+        padding-right: 10px;
+        padding-left: 10px;
+        ${({ theme }) => theme.media.pc} {
+            max-width: 25%;
+        }
+        ${({ theme }) => theme.media.lap} {
+            max-width: 25%;
+        }
+        ${({ theme }) => theme.media.tab} {
+            max-width: 50%;
+            padding-top: 60px;
+        }
+        ${({ theme }) => theme.media.mob} {
+            max-width: 100%;
+            padding-top: 60px;
+        }
+    `
+    const [showSearchBox, setShowSearchBox] = useState(false)
+    const searchBoxToggle = () => setShowSearchBox(!showSearchBox)
     return (
-        <HeaderWrapper>
-            {showBackgroundBlur && <BackgroundBlur />}
-            <HeaderContainer>
-                <HeaderRow>
-                    <HomeIcon
+        <HeaderArea>
+            {showSearchBox && <BackgroundBlurDiv />}
+            <HeaderInnerDiv>
+                <HeaderMenuPartDiv>
+                    <HomeIconImg
                         alt="home"
                         src={`${process.env.PUBLIC_URL}/images/icon_home.png`}
                     />
 
-                    <MenuNav>
-                        <SubNav>
-                            <NavList>LOGIN</NavList>
-                            <NavList>SIGNUP</NavList>
-                            <NavList>
-                                <Icon
-                                    alt="search"
-                                    src={`${process.env.PUBLIC_URL}/images/icon_navi_search.png`}
-                                    onClick={blurToggle}
-                                />
-                                SEARCH
-                            </NavList>
+                    <MenuNavUlDiv>
+                        <SubNavUl>
+                            <NavListLi>LOGIN</NavListLi>
+                            <NavListLi>SIGNUP</NavListLi>
+                            <NavListLi>
+                                <span
+                                    role="none"
+                                    onClick={searchBoxToggle}
+                                    onKeyDown={searchBoxToggle}
+                                >
+                                    {showSearchBox ? (
+                                        <IconImg
+                                            alt="close"
+                                            src={`${process.env.PUBLIC_URL}/images/navi_top_search_close.png`}
+                                        />
+                                    ) : (
+                                        <IconImg
+                                            alt="search"
+                                            src={`${process.env.PUBLIC_URL}/images/icon_navi_search.png`}
+                                        />
+                                    )}
+                                    SEARCH
+                                </span>
+                            </NavListLi>
 
-                            <MainNavListMenu>
-                                <Icon
+                            <MainNavListMenuLi>
+                                <IconImg
                                     alt="menu"
                                     src={`${process.env.PUBLIC_URL}/images/icon_navi_menu.png`}
                                 />
                                 MENU
-                            </MainNavListMenu>
-                        </SubNav>
-                        <MainNavWrap>
-                            <MainNav>
-                                <MainNavList>Design,</MainNavList>
-                                <MainNavList>Art,</MainNavList>
-                                <MainNavList>Living,</MainNavList>
-                                <MainNavList>Style,</MainNavList>
-                                <MainNavList>Food,</MainNavList>
-                                <MainNavList>Stories,</MainNavList>
-                                <MainNavList>Store,</MainNavList>
-                                <MainNavList>About,</MainNavList>
-                                <MainNavList>Newsletter</MainNavList>
-                            </MainNav>
-                        </MainNavWrap>
-                    </MenuNav>
-                    <InstagramIcon
+                            </MainNavListMenuLi>
+                        </SubNavUl>
+                        <MainNavDiv>
+                            <MainNavUl>
+                                <MainNavListLi>Design,</MainNavListLi>
+                                <MainNavListLi>Art,</MainNavListLi>
+                                <MainNavListLi>Living,</MainNavListLi>
+                                <MainNavListLi>Style,</MainNavListLi>
+                                <MainNavListLi>Food,</MainNavListLi>
+                                <MainNavListLi>Stories,</MainNavListLi>
+                                <MainNavListLi>Store,</MainNavListLi>
+                                <MainNavListLi>About,</MainNavListLi>
+                                <MainNavListLi>Newsletter</MainNavListLi>
+                            </MainNavUl>
+                        </MainNavDiv>
+                    </MenuNavUlDiv>
+                    <InstagramIconImg
                         alt="instagram"
                         src={`${process.env.PUBLIC_URL}/images/icon_instagram.png`}
                     />
-                </HeaderRow>
-            </HeaderContainer>
-        </HeaderWrapper>
+                </HeaderMenuPartDiv>
+            </HeaderInnerDiv>
+            {showSearchBox && (
+                <SearchAreaDiv>
+                    <SearchInnerDiv>
+                        <SearchInputPartDiv>
+                            <SearchInputInnerDiv>
+                                <SearchInput
+                                    type="search"
+                                    placeholder="팝업 스토어, 전시, 레트로, 컬렉션, 취향"
+                                />
+                            </SearchInputInnerDiv>
+                            <SearchInnerContainerDiv>
+                                <SearchInnerContentDiv>
+                                    <SearchBoxInner />
+                                </SearchInnerContentDiv>
+                                <SearchInnerContentDiv>
+                                    <SearchBoxInner />
+                                </SearchInnerContentDiv>
+                                <SearchInnerContentDiv>
+                                    <SearchBoxInner />
+                                </SearchInnerContentDiv>
+                                <SearchInnerContentDiv>
+                                    <SearchBoxInner />
+                                </SearchInnerContentDiv>
+                            </SearchInnerContainerDiv>
+                        </SearchInputPartDiv>
+                    </SearchInnerDiv>
+                </SearchAreaDiv>
+            )}
+        </HeaderArea>
     )
 }
 
