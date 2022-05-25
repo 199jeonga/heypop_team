@@ -33,7 +33,7 @@ const media: { [key: string]: string } = {
 // style 적용 시 반복적으로 사용하는 코드
 const styles: { [key: string]: string } = {
     center: 'margin:0 auto;',
-    blind: 'display: block; width: 1; height: 1; position: absolute; z-index:-1; overflow: hidden;',
+    blind: 'border: 0; clip: rect(0 0 0 0); clip-path: inset(50%); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap;',
     displayNone:
         'display: block; width: 0; height: 0; position: absolute; z-index:-1; overflow: hidden;',
     full: 'display:block; width:100%; height:100%;',

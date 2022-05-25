@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const StyledDivBox = styled.div`
+const WrapDiv = styled.div`
     width: 100%;
     img {
         width: 380px;
@@ -17,7 +17,7 @@ const StyledDivBox = styled.div`
         }
     }
 `
-const StyledDivText = styled.ul`
+const ContentDiv = styled.div`
     width: 100%;
     height: auto;
     margin: 20px 0 24px;
@@ -51,14 +51,14 @@ const StyledLink = styled(Link)`
 `
 function SliderInner() {
     return (
-        <StyledDivBox>
+        <WrapDiv>
             <StyledLink to="/">
                 <img
                     src="https://storage.heypop.kr/assets/2022/05/11112445/t-9.jpg?w=800&h=400&f=jpg&q=100"
                     alt="어쩌구"
                 />
             </StyledLink>
-            <StyledDivText>
+            <ContentDiv>
                 <h5>
                     <StyledLink to="/">카테고리 링크 연결</StyledLink>
                 </h5>
@@ -66,8 +66,8 @@ function SliderInner() {
                     <span>타이틀!!! 지정하기!!! 입니당</span>
                 </StyledLink>
                 <div>링크 없는 짧은 설명 ㅇ_ㅇ</div>
-            </StyledDivText>
-        </StyledDivBox>
+            </ContentDiv>
+        </WrapDiv>
     )
 }
 export default SliderInner

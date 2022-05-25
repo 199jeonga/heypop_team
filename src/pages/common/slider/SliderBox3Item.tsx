@@ -2,11 +2,11 @@ import React from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
 
-import SliderInner from './SliderInner'
+import SliderArea from '../../../components/listItem/ListItem'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-const StyledSliderBox = styled.section`
+const WrapSection = styled.section`
     width: 100%;
     height: auto;
     padding-top: 130px;
@@ -25,26 +25,28 @@ const StyledSliderBox = styled.section`
         }
         ${({ theme }) => theme.media.mob} {
             padding-bottom: 20px;
+            text-align: center;
         }
         ${({ theme }) => theme.media.minTab} {
             font-size: 24px;
-            text-align: center;
         }
     }
-    & > div {
-        width: 1440px;
+`
+const WrapDiv = styled.div`
+    width: 1440px;
+    height: auto;
+    padding: 0 130px;
+    ${({ theme }) => theme.styles.center}
+    ${({ theme }) => theme.media.lap} {
+        width: ${({ theme }) => theme.vwLap(1400)};
         height: auto;
-        padding: 0 130px;
-        ${({ theme }) => theme.styles.center}
-        ${({ theme }) => theme.media.lap} {
-            width: ${({ theme }) => theme.vwLap(1400)};
-            height: auto;
-        }
-        ${({ theme }) => theme.media.minTab} {
-            width: 100%;
-            padding: 0;
-        }
     }
+    ${({ theme }) => theme.media.minTab} {
+        width: 100%;
+        padding: 0;
+    }
+
+    //slick - className --------------------------
     .slick-slider {
         position: relative;
         width: 100%;
@@ -101,6 +103,20 @@ const StyledSliderBox = styled.section`
 `
 
 function SliderBox() {
+    // const [data, setata] = useState([])
+    // const fetchData = () => {
+    //     fetch(`/data/trend.json`, {
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             Accept: 'application/json',
+    //         },
+    //     })
+    //         .then((res) => res.json())
+    //         .then((re) => console.log(re))
+    // }
+    // useEffect(() => {
+    //     fetchData()
+    // }, [])
     // slick slider
     const settings = {
         className: 'center',
@@ -121,31 +137,31 @@ function SliderBox() {
     }
 
     return (
-        <StyledSliderBox>
-            <div>
+        <WrapSection>
+            <WrapDiv>
                 <h3>주목해야 할 위클리 팝업 POP10</h3>
                 <Slider {...settings}>
                     <div>
-                        <SliderInner />
+                        <SliderArea />
                     </div>
                     <div>
-                        <SliderInner />
+                        <SliderArea />
                     </div>
                     <div>
-                        <SliderInner />
+                        <SliderArea />
                     </div>
                     <div>
-                        <SliderInner />
+                        <SliderArea />
                     </div>
                     <div>
-                        <SliderInner />
+                        <SliderArea />
                     </div>
                     <div>
-                        <SliderInner />
+                        <SliderArea />
                     </div>
                 </Slider>
-            </div>
-        </StyledSliderBox>
+            </WrapDiv>
+        </WrapSection>
     )
 }
 export default SliderBox

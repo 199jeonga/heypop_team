@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 function Viewbox() {
-    const StyledDiv = styled.div`
+    const WrapDiv = styled.div`
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -24,7 +24,7 @@ function Viewbox() {
             padding: 50px 0 50px;
         }
     `
-    const StyledP = styled.p`
+    const ContentP = styled.p`
         width: 100%;
         height: 25px;
         line-height: 25px;
@@ -46,7 +46,7 @@ function Viewbox() {
             color: ${({ theme }) => theme.colors.black};
         }
     `
-    const StyledDivImg = styled.div`
+    const LogoImg = styled.div`
         width: auto;
         height: auto;
         ${({ theme }) => theme.media.mob} {
@@ -68,18 +68,18 @@ function Viewbox() {
     `
 
     return (
-        <StyledDiv>
-            <StyledP>
+        <WrapDiv>
+            <ContentP>
                 <span>DISCOVER YOUR FAVORITES</span>
                 <span>WITH CREATOR, BY CURATOR, FROM BRAND</span>
-            </StyledP>
-            <StyledDivImg>
+            </ContentP>
+            <LogoImg>
                 <img
                     src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
                     alt="heypop"
                 />
-            </StyledDivImg>
-        </StyledDiv>
+            </LogoImg>
+        </WrapDiv>
     )
 }
 export default Viewbox
