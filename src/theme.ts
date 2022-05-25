@@ -28,7 +28,7 @@ const media: { [key: string]: string } = {
 
 // style 적용 시 반복적으로 사용하는 코드
 const styles: { [key: string]: string } = {
-    center: 'margin-left: 50%;  transform: translateX(-50%);',
+    center: 'margin:0 auto;',
     blind: 'display: block; width: 1; height: 1; position: absolute; z-index:-1; overflow: hidden;',
     displayNone:
         'display: block; width: 0; height: 0; position: absolute; z-index:-1; overflow: hidden;',

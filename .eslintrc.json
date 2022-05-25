@@ -8,7 +8,9 @@
         "airbnb",
         "prettier",
         "prettier/prettier",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -31,6 +33,7 @@
         ],
         "react/prop-types": "off",
         "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
         "prettier/prettier": ["error", { "endOfLine": "auto" }]
     },
     "settings": {
