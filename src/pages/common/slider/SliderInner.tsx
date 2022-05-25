@@ -4,10 +4,17 @@ import styled from 'styled-components'
 
 const StyledDivBox = styled.div`
     width: 100%;
-    width: 380px;
     img {
         width: 380px;
-        height: 190px;
+        height: auto;
+        ${({ theme }) => theme.media.lap} {
+            width: 96%;
+            height: auto;
+        }
+        ${({ theme }) => theme.media.minTab} {
+            width: 98%;
+            height: auto;
+        }
     }
 `
 const StyledDivText = styled.ul`
@@ -16,7 +23,7 @@ const StyledDivText = styled.ul`
     margin: 20px 0 24px;
     h5 {
         width: 100%;
-        height: 26px;
+        height: auto;
         line-height: 26px;
         font-size: 14px;
         text-transform: uppercase;
@@ -31,7 +38,7 @@ const StyledDivText = styled.ul`
     }
     div {
         width: 100%;
-        height: 24px;
+        height: auto;
         padding-bottom: 2px;
         font-size: 14px;
         font-weight: 400;

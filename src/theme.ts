@@ -16,16 +16,18 @@ const vwLap = (objSize: number) => `${(objSize / size.lap) * 100}vw;`
 
 // responsive
 const media: { [key: string]: string } = {
-    mob: `@media screen and (max-width: ${size.mob}px)`,
-    tab: `@media screen and (min-width:${size.mob - 1}px) and (max-width: ${
-        size.tab
+    mob: `@media screen and (max-width: ${size.mob - 1}px)`,
+    tab: `@media screen and (min-width:${size.mob}px) and (max-width: ${
+        size.tab - 1
     }px)`,
-    lap: `@media screen and (min-width:${size.tab - 1}px) and (max-width: ${
-        size.lap
+    lap: `@media screen and (min-width:${size.tab}px) and (max-width: ${
+        size.lap - 1
     }px)`,
-    pc: `@media screen and (min-width: ${size.lap - 1}px)`,
+    pc: `@media screen and (min-width: ${size.lap}px)`,
     maxHeader: `@media screen and (min-width: ${size.lap}px)`,
     minHeader: `@media screen and (max-width: ${size.lap - 1}px)`,
+    maxTab: `@media screen and (min-width: ${size.tab}px)`,
+    minTab: `@media screen and (max-width: ${size.tab - 1}px)`,
 }
 
 // style 적용 시 반복적으로 사용하는 코드

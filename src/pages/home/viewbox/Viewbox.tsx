@@ -18,10 +18,10 @@ function Viewbox() {
             padding: 55px 90px 0;
         }
         ${({ theme }) => theme.media.mob} {
-            max-height: none;
             display: block;
+            max-height: none;
             height: auto;
-            padding: 55px 0 0;
+            padding: 50px 0 50px;
         }
     `
     const StyledP = styled.p`
@@ -46,13 +46,24 @@ function Viewbox() {
             color: ${({ theme }) => theme.colors.black};
         }
     `
-    const StyledImg = styled.img`
+    const StyledDivImg = styled.div`
         width: auto;
-        max-width: 380px;
         height: auto;
         ${({ theme }) => theme.media.mob} {
-            ${({ theme }) => theme.styles.center}
-            width: 50.667vw;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            width: auto;
+            max-width: 360px;
+            height: auto;
+            padding-left: 20px;
+            ${({ theme }) => theme.media.tab} {
+                width: ${({ theme }) => theme.vwTab(340)};
+            }
+            ${({ theme }) => theme.media.mob} {
+                width: ${({ theme }) => theme.vwMob(340)};
+            }
         }
     `
 
@@ -62,10 +73,12 @@ function Viewbox() {
                 <span>DISCOVER YOUR FAVORITES</span>
                 <span>WITH CREATOR, BY CURATOR, FROM BRAND</span>
             </StyledP>
-            <StyledImg
-                src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
-                alt="heypop"
-            />
+            <StyledDivImg>
+                <img
+                    src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
+                    alt="heypop"
+                />
+            </StyledDivImg>
         </StyledDiv>
     )
 }
