@@ -44,7 +44,7 @@ const WrapDiv = styled.div`
         width: 48px;
         height: 48px;
         &::before {
-            display: none;
+            ${({ theme }) => theme.styles.displayNone}
         }
         ${({ theme }) => theme.media.minTab} {
             ${({ theme }) => theme.styles.displayNone}
@@ -79,12 +79,13 @@ function SliderBox() {
     // useEffect(() => {
     //     fetchData()
     // }, [])
-    // slick slider
+
+    // slick slider setting
     const settings = {
         className: 'center',
         infinite: true,
         slidesToShow: 1,
-        speed: 500,
+        speed: 800,
         centerMode: true,
         centerPadding: '0',
         nextArrow: <NextArrow />,

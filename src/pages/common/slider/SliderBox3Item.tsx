@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import styled from 'styled-components'
 
 import SliderArea from '../../../components/listItem/ListItem'
+import TitleH3 from './SliderAreaH3'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
@@ -12,24 +13,6 @@ const WrapSection = styled.section`
     padding-top: 130px;
     ${({ theme }) => theme.media.mob} {
         padding-top: 40px;
-    }
-    h3 {
-        width: 100%;
-        font-weight: 700;
-        padding-bottom: 47px;
-        font-size: 36px;
-        line-height: 150%;
-        ${({ theme }) => theme.media.tab} {
-            padding-bottom: 15px;
-            margin-left: 45px;
-        }
-        ${({ theme }) => theme.media.mob} {
-            padding-bottom: 20px;
-            text-align: center;
-        }
-        ${({ theme }) => theme.media.minTab} {
-            font-size: 24px;
-        }
     }
 `
 const WrapDiv = styled.div`
@@ -139,7 +122,7 @@ function SliderBox() {
     return (
         <WrapSection>
             <WrapDiv>
-                <h3>주목해야 할 위클리 팝업 POP10</h3>
+                <TitleH3 text="주목해야 할 위클리 팝업 POP10" />
                 <Slider {...settings}>
                     <div>
                         <SliderArea />
