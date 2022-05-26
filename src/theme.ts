@@ -24,8 +24,6 @@ const media: { [key: string]: string } = {
         size.lap
     }px)`,
     pc: `@media screen and (min-width: ${size.lap - 1}px)`,
-    maxHeader: `@media screen and (min-width: ${size.lap}px)`,
-    minHeader: `@media screen and (max-width: ${size.lap - 1}px)`,
 }
 
 // style 적용 시 반복적으로 사용하는 코드
