@@ -219,8 +219,40 @@ function HeaderBox() {
             padding-bottom: 30px;
         }
     `
+    const MenuAreaDiv = styled.div`
+        position: unset;
+        top: 0;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        z-index: 13;
+        overflow-y: hidden;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 16px;
+        ul {
+            font-size: 22px;
+        }
+    `
+    const MenuInnerDiv = styled.div`
+        text-align: center;
+        img {
+            display: inline-block;
+        }
+    `
+    const MenuUlPartDiv = styled.div`
+        padding-top: calc(50vh - 40px);
+    `
+    const MenuIconPartDiv = styled.div`
+        padding-top: 40vh;
+    `
     const [showSearchBox, setShowSearchBox] = useState(false)
     const searchBoxToggle = () => setShowSearchBox(!showSearchBox)
+    const [showMenuBox, setShowMenuBox] = useState(false)
+    const searchMenuToggle = () => setShowMenuBox(!showMenuBox)
     return (
         <HeaderArea>
             {showSearchBox && <BackgroundBlurDiv />}
@@ -257,11 +289,17 @@ function HeaderBox() {
                             </NavListLi>
 
                             <MainNavListMenuLi>
-                                <IconImg
-                                    alt="menu"
-                                    src={`${process.env.PUBLIC_URL}/images/icon_navi_menu.png`}
-                                />
-                                MENU
+                                <span
+                                    role="none"
+                                    onClick={searchMenuToggle}
+                                    onKeyDown={searchMenuToggle}
+                                >
+                                    <IconImg
+                                        alt="menu"
+                                        src={`${process.env.PUBLIC_URL}/images/icon_navi_menu.png`}
+                                    />
+                                    MENU
+                                </span>
                             </MainNavListMenuLi>
                         </SubNavUl>
                         <MainNavDiv>
@@ -311,6 +349,33 @@ function HeaderBox() {
                         </SearchInputPartDiv>
                     </SearchInnerDiv>
                 </SearchAreaDiv>
+            )}
+            {showMenuBox && (
+                <MenuAreaDiv>
+                    <MenuInnerDiv>
+                        <MenuUlPartDiv>
+                            <MainNavUl>
+                                <MainNavListLi>Design,</MainNavListLi>
+                                <MainNavListLi>Art,</MainNavListLi>
+                                <MainNavListLi>Living,</MainNavListLi>
+                                <MainNavListLi>Style,</MainNavListLi>
+                                <MainNavListLi>Food,</MainNavListLi>
+                                <MainNavListLi>Stories,</MainNavListLi>
+                                <MainNavListLi>Store,</MainNavListLi>
+                                <MainNavListLi>About,</MainNavListLi>
+                                <MainNavListLi>Newsletter</MainNavListLi>
+                            </MainNavUl>
+                        </MenuUlPartDiv>
+                    </MenuInnerDiv>
+                    <MenuInnerDiv>
+                        <MenuIconPartDiv>
+                            <IconImg
+                                alt="instagram"
+                                src={`${process.env.PUBLIC_URL}/images/icon_instagram.png`}
+                            />
+                        </MenuIconPartDiv>
+                    </MenuInnerDiv>
+                </MenuAreaDiv>
             )}
         </HeaderArea>
     )
