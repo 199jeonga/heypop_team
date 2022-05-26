@@ -40,6 +40,13 @@
     "settings": {
         "import/resolver": {
             "typescript": {}
-        }
+        },
+        "prefer-const": [
+            "error",
+            {
+                "destructuring": "all",
+                "ignoreReadBeforeAssign": false
+            }
+        ]
     }
 }

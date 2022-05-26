@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
+import axios from 'axios'
 
 import SliderArea from '../../../components/listItem/ListItem'
 import TitleH3 from './SliderAreaH3'
@@ -84,23 +85,27 @@ const WrapDiv = styled.div`
         right: -54px;
     }
 `
+type SliderProps = {
+    title: string
+    jsonDataLink: string
+}
 
-function SliderBox() {
-    // const [data, setata] = useState([])
-    // const fetchData = () => {
-    //     fetch(`/data/trend.json`, {
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             Accept: 'application/json',
-    //         },
-    //     })
-    //         .then((res) => res.json())
-    //         .then((re) => console.log(re))
-    // }
-    // useEffect(() => {
-    //     fetchData()
-    // }, [])
-    // slick slider
+function SliderBox({ title, jsonDataLink }: SliderProps) {
+    const dataAddress = `./data/${jsonDataLink}`
+    const [data, setData] = useState<any[]>([])
+    const importData = async () => {
+        const jsonData = await axios.get(dataAddress, {
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+        })
+        setData(jsonData.data)
+    }
+    useEffect(() => {
+        importData()
+    }, [])
+
     const settings = {
         className: 'center',
         infinite: true,
@@ -122,26 +127,22 @@ function SliderBox() {
     return (
         <WrapSection>
             <WrapDiv>
-                <TitleH3 text="주목해야 할 위클리 팝업 POP10" />
+                <TitleH3 text={title} />
                 <Slider {...settings}>
-                    <div>
+                    {data.map((item) => (
+                        <div key={item}>
+                            <SliderArea
+                                id={item.id}
+                                img={item.img}
+                                title={item.title}
+                                subtitle={item.subtitle}
+                                Classification={item.Classification}
+                            />
+                        </div>
+                    ))}
+                    {/* <div>
                         <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
+                    </div> */}
                 </Slider>
             </WrapDiv>
         </WrapSection>

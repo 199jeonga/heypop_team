@@ -48,24 +48,33 @@ const ContentDiv = styled.div`
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.black};
+    text-transform: uppercase;
 `
-function SliderInner() {
+interface Iprops {
+    id: string
+    img: string
+    title: string
+    subtitle: string
+    Classification: string
+}
+function SliderInner({ id, img, title, subtitle, Classification }: Iprops) {
     return (
         <WrapDiv>
-            <StyledLink to="/">
-                <img
-                    src="https://storage.heypop.kr/assets/2022/05/11112445/t-9.jpg?w=800&h=400&f=jpg&q=100"
-                    alt="어쩌구"
-                />
+            <StyledLink to={`${process.env.PUBLIC_URL}/${id}`}>
+                <img src={img} alt={subtitle} />
             </StyledLink>
             <ContentDiv>
                 <h5>
-                    <StyledLink to="/">카테고리 링크 연결</StyledLink>
+                    <StyledLink
+                        to={`${process.env.PUBLIC_URL}/${Classification}`}
+                    >
+                        {Classification}
+                    </StyledLink>
                 </h5>
-                <StyledLink to="/">
-                    <span>타이틀!!! 지정하기!!! 입니당</span>
+                <StyledLink to={`${process.env.PUBLIC_URL}/${id}`}>
+                    <span>{title}</span>
                 </StyledLink>
-                <div>링크 없는 짧은 설명 ㅇ_ㅇ</div>
+                <div>{subtitle}</div>
             </ContentDiv>
         </WrapDiv>
     )

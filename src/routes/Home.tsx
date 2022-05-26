@@ -9,7 +9,14 @@ function Home() {
         <div>
             <HeaderBox />
             <Viewbox />
-            <SliderBox3Item />
+            <SliderBox3Item
+                title="주목해야 할 위클리 팝업 POP10"
+                jsonDataLink="weeeklyPopup.json"
+            />
+            <SliderBox3Item
+                title="지금 뜨는 트렌드 이슈"
+                jsonDataLink="trend.json"
+            />
             <SliderBox1Item />
         </div>
     )
