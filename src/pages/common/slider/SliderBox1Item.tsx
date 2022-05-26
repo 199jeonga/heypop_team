@@ -1,53 +1,12 @@
 import React from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
-import { ChevronForwardOutline, ChevronBackOutline } from 'react-ionicons'
 
 import SliderArea from './SliderArea'
+import NextArrow from './SliderAreaNextarrow'
+import PrevArrow from './SliderAreaPrevarrow'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
-function SampleNextArrow(props: any) {
-    const { className, style, onClick } = props
-    return (
-        <button
-            className={className}
-            style={{ ...style, display: 'block', background: 'red' }}
-            onClick={onClick}
-            onKeyPress={onClick}
-            type="button"
-            aria-label="다음 슬라이드로 이동"
-        >
-            <ChevronForwardOutline
-                color="#ffffff"
-                title="title이뭐냐"
-                height="48px"
-                width="48px"
-            />
-        </button>
-    )
-}
-
-function SamplePrevArrow(props: any) {
-    const { className, style, onClick } = props
-    return (
-        <button
-            className={className}
-            style={{ ...style, display: 'block', background: 'red' }}
-            onClick={onClick}
-            onKeyPress={onClick}
-            type="button"
-            aria-label="다음 슬라이드로 이동"
-        >
-            <ChevronBackOutline
-                color="#ffffff"
-                title="title이뭐냐"
-                height="48px"
-                width="48px"
-            />
-        </button>
-    )
-}
 
 const WrapSection = styled.section`
     width: 100%;
@@ -79,26 +38,29 @@ const WrapDiv = styled.div`
     //Slide Button
     .slick-prev,
     .slick-next {
+        ${({ theme }) => theme.styles.displayNone}
         position: absolute;
         z-index: 100;
         width: 48px;
         height: 48px;
-        top: 550px;
         &::before {
-            transition: all 500ms ease;
-            color: ${({ theme }) => theme.colors.black};
-            opacity: 0.15;
-            font-size: 48px;
+            display: none;
         }
         ${({ theme }) => theme.media.minTab} {
             ${({ theme }) => theme.styles.displayNone}
         }
     }
     .slick-prev {
-        left: 130px;
+        left: 200px;
+        ${({ theme }) => theme.media.lap} {
+            left: ${({ theme }) => theme.vwLap(200)};
+        }
     }
     .slick-next {
-        right: 130px;
+        right: 200px;
+        ${({ theme }) => theme.media.lap} {
+            right: ${({ theme }) => theme.vwLap(200)};
+        }
     }
 `
 
@@ -125,8 +87,8 @@ function SliderBox() {
         speed: 500,
         centerMode: true,
         centerPadding: '0',
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
