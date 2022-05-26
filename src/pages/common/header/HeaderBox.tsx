@@ -147,12 +147,17 @@ function HeaderBox() {
         margin-left: auto;
     `
     const SearchInputPartDiv = styled.div`
-        padding: 70px 90px;
         ${({ theme }) => theme.media.pc} {
             padding: 70px 130px;
         }
+        ${({ theme }) => theme.media.lap} {
+            padding: 70px 90px;
+        }
+        ${({ theme }) => theme.media.tab} {
+            padding: 70px 90px;
+        }
         ${({ theme }) => theme.media.mob} {
-            padding: 70px 0;
+            padding: 30px 15px 1px;
         }
         max-width: 1440px;
         margin-right: auto;
@@ -200,6 +205,7 @@ function HeaderBox() {
         display: inline-block;
         padding-right: 10px;
         padding-left: 10px;
+        max-width: 50%;
         ${({ theme }) => theme.media.pc} {
             max-width: 25%;
         }
@@ -207,12 +213,10 @@ function HeaderBox() {
             max-width: 25%;
         }
         ${({ theme }) => theme.media.tab} {
-            max-width: 50%;
             padding-top: 60px;
         }
         ${({ theme }) => theme.media.mob} {
-            max-width: 100%;
-            padding-top: 60px;
+            padding-bottom: 30px;
         }
     `
     const [showSearchBox, setShowSearchBox] = useState(false)

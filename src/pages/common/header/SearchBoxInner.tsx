@@ -9,6 +9,9 @@ const StyledDivText = styled.ul`
     width: 100%;
     height: auto;
     margin: 20px 0 24px;
+    ${({ theme }) => theme.media.mob} {
+        margin: 10px 0 0;
+    }
     h5 {
         width: 100%;
         height: 26px;
@@ -16,6 +19,9 @@ const StyledDivText = styled.ul`
         font-size: 14px;
         text-transform: uppercase;
         font-weight: 500;
+        ${({ theme }) => theme.media.mob} {
+            ${({ theme }) => theme.styles.displayNone}
+        }
     }
     span {
         width: 100%;
@@ -23,6 +29,9 @@ const StyledDivText = styled.ul`
         font-size: 16px;
         font-weight: 700;
         line-height: 1.75rem;
+        ${({ theme }) => theme.media.mob} {
+            font-size: 14px;
+        }
     }
     div {
         width: 100%;
