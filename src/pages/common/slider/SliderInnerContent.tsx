@@ -26,11 +26,11 @@ const WrapDiv = styled.div`
         text-align: center;
     }
 `
-function SliderInnerContent() {
+function SliderInnerContent({ title, subtitle }: any) {
     return (
         <WrapDiv>
-            <h2>제목입니다제목입니다제목</h2>
-            <p>내용입니다내용입니다내용입니다내용입니다내용</p>
+            <h2>{title}</h2>
+            <p>{subtitle}</p>
         </WrapDiv>
     )
 }

@@ -140,9 +140,6 @@ function SliderBox({ title, jsonDataLink }: SliderProps) {
                             />
                         </div>
                     ))}
-                    {/* <div>
-                        <SliderArea />
-                    </div> */}
                 </Slider>
             </WrapDiv>
         </WrapSection>

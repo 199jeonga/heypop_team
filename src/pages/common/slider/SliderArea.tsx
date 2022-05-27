@@ -10,12 +10,29 @@ const WrapSection = styled.section`
     height: 642px;
     background-color: rgba(0, 0, 0, 0.2);
 `
-function SliderArea() {
+
+interface Iprops {
+    imgBig: string
+    imgMin: string
+    title: string
+    subtitle: string
+    category: string
+    link: string
+}
+
+function SliderArea({
+    imgBig,
+    imgMin,
+    title,
+    subtitle,
+    category,
+    link,
+}: Iprops) {
     return (
         <WrapSection>
-            <BackgroundDiv />
-            <LabelDiv />
-            <ContentDiv />
+            <BackgroundDiv imgMin={imgMin} imgBig={imgBig} link={link} />
+            <LabelDiv category={category} />
+            <ContentDiv title={title} subtitle={subtitle} />
         </WrapSection>
     )
 }

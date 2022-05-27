@@ -42,7 +42,7 @@ const TextDiv = styled.div`
     float: left;
     width: auto;
     height: auto;
-    padding: 23px 28px;
+    padding: 22px 28px;
     font-size: 36px;
     font-weight: 800;
     background-color: ${({ theme }) => theme.colors.point};
@@ -51,16 +51,16 @@ const TextDiv = styled.div`
         padding: 13px 15px 12px;
     }
 `
-function SliderInnerLabel() {
+function SliderInnerLabel({ category }: any) {
     return (
         <WrapDiv>
             <LogoDiv>
                 <img
                     src={`${process.env.PUBLIC_URL}/images/logo.svg`}
-                    alt="lorem asdf"
+                    alt="헤이팝"
                 />
             </LogoDiv>
-            <TextDiv>Living</TextDiv>
+            <TextDiv> {category} </TextDiv>
         </WrapDiv>
     )
 }

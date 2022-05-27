@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const WrapDiv = styled.div`
@@ -12,27 +13,50 @@ const WrapDiv = styled.div`
         background: linear-gradient(
             180deg,
             rgba(0, 0, 0, 0) 50%,
-            rgba(0, 0, 0, 0.3) 100%
+            rgba(0, 0, 0, 0.4) 100%
         );
     }
-    & div:last-child {
-        width: 100%;
-        height: 100%;
-        ${({ theme }) => theme.media.maxTab} {
-            background-image: url('https://storage.heypop.kr/assets/2022/05/19121828/1-main.jpg');
-        }
-        ${({ theme }) => theme.media.minTab} {
-            background-image: url('https://storage.heypop.kr/assets/2022/05/19121830/1-main_M.jpg');
-        }
+`
+const BackgoundDiv = styled.div`
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+`
+const BackgoundBigDiv = styled(BackgoundDiv)`
+    ${({ theme }) => theme.media.maxTab} {
+        display: block;
         background-repeat: no-repeat;
-        background-size: cover;
     }
 `
-function SliderInnerBackground() {
+const BackgoundMinDiv = styled(BackgoundDiv)`
+    ${({ theme }) => theme.media.minTab} {
+        display: block;
+        background-repeat: no-repeat;
+    }
+`
+const ImgLink = styled(Link)`
+    display: block;
+    width: 100%;
+    height: 100%;
+`
+function SliderInnerBackground({ imgMin, imgBig, link }: any) {
     return (
         <WrapDiv>
-            <div>백그라운드</div>
-            <div>이미지</div>
+            <div />
+            <BackgoundBigDiv
+                style={{
+                    backgroundImage: `url(${imgBig})`,
+                }}
+            >
+                <ImgLink to={link} />
+            </BackgoundBigDiv>
+            <BackgoundMinDiv
+                style={{
+                    backgroundImage: `url(${imgMin})`,
+                }}
+            />
         </WrapDiv>
     )
 }

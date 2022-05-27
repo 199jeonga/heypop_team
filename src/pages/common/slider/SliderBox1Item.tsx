@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
+import axios from 'axios'
 
 import SliderArea from './SliderArea'
 import NextArrow from './SliderAreaNextarrow'
@@ -63,23 +64,25 @@ const WrapDiv = styled.div`
         }
     }
 `
+type SliderProps = {
+    jsonDataLink: string
+}
 
-function SliderBox() {
-    // const [data, setata] = useState([])
-    // const fetchData = () => {
-    //     fetch(`/data/trend.json`, {
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             Accept: 'application/json',
-    //         },
-    //     })
-    //         .then((res) => res.json())
-    //         .then((re) => console.log(re))
-    // }
-    // useEffect(() => {
-    //     fetchData()
-    // }, [])
-
+function SliderBox({ jsonDataLink }: SliderProps) {
+    const dataAddress = `./data/${jsonDataLink}`
+    const [data, setData] = useState<any[]>([])
+    const importData = async () => {
+        const jsonData = await axios.get(dataAddress, {
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+        })
+        setData(jsonData.data)
+    }
+    useEffect(() => {
+        importData()
+    }, [])
     // slick slider setting
     const settings = {
         className: 'center',
@@ -105,15 +108,18 @@ function SliderBox() {
             <WrapDiv>
                 <h3>카테고리별 인기 게시글</h3>
                 <Slider {...settings}>
-                    <div>
-                        <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
-                    <div>
-                        <SliderArea />
-                    </div>
+                    {data.map((item) => (
+                        <div key={item}>
+                            <SliderArea
+                                imgBig={item.imgBig}
+                                imgMin={item.imgMin}
+                                title={item.title}
+                                subtitle={item.subtitle}
+                                category={item.category}
+                                link={item.link}
+                            />
+                        </div>
+                    ))}
                 </Slider>
             </WrapDiv>
         </WrapSection>
