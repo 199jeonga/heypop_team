@@ -49,6 +49,10 @@ const StyledLink = styled(Link)`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.black};
     text-transform: uppercase;
+    &:hover {
+        transition: all 400ms ease;
+        filter: opacity(0.7);
+    }
 `
 interface Iprops {
     id: string

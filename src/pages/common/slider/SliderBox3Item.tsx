@@ -68,7 +68,12 @@ const WrapDiv = styled.div`
         z-index: 100;
         width: 36px;
         height: 36px;
-
+        &:hover {
+            &::before {
+                transition: all 500ms ease;
+                opacity: 1;
+            }
+        }
         &::before {
             color: ${({ theme }) => theme.colors.black};
             opacity: 0.15;
