@@ -1,0 +1,90 @@
+[
+    {
+        "id": "living1",
+        "indexNum": 1,
+        "img": "https://storage.heypop.kr/assets/2022/05/26161921/main1-scaled.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "일상을 바꾸는 꽃, 꾸까의 새 모습",
+        "subtitle": "팝업 스토어 KUKKA Terrace Galleria",
+        "Classification": "brand"
+    },
+    {
+        "id": "living2",
+        "indexNum": 2,
+        "img": "https://storage.heypop.kr/assets/2022/05/24184849/20001000-scaled.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "비블리오뗴끄만의 취향과 시선 그리고 안목",
+        "subtitle": "비블리오뗴끄 김영관 대표의 'Select' 이야기",
+        "Classification": "place"
+    },
+    {
+        "id": "living3",
+        "indexNum": 3,
+        "img": "https://storage.heypop.kr/assets/2022/05/24164408/t-29.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "부산 바다 뷰와 함꼐 하는 금성오락실 시즌2",
+        "subtitle": "서울 성수동에 이어 론칭한, 업그레이드된 금성오락실",
+        "Classification": "exhibition"
+    },
+    {
+        "id": "living4",
+        "indexNum": 4,
+        "img": "https://storage.heypop.kr/assets/2022/05/18195749/t-22.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "지구를 생각하는 식물연구소",
+        "subtitle": "틸테이블 x 레어로우 x 선데이 플래닛 47팝업",
+        "Classification": "exhibition"
+    },
+    {
+        "id": "living5",
+        "indexNum": 5,
+        "img": "https://storage.heypop.kr/assets/2022/05/18141631/t-20.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "내 사랑 댕댕이와 함께 떠나는 트레킹!",
+        "subtitle": "전용 숲속에서 즐기는 '댕댕트레킹 2022'",
+        "Classification": "place"
+    },
+    {
+        "id": "living6",
+        "indexNum": 6,
+        "img": "https://storage.heypop.kr/assets/2022/05/16102806/t-16.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "당신2 9하던 삶은 어떤 모습인가요?",
+        "subtitle": "29CM의 첫 팝업스토어, 29맨션",
+        "Classification": "exhibition"
+    },
+    {
+        "id": "living7",
+        "indexNum": 7,
+        "img": "https://storage.heypop.kr/assets/2022/05/13101202/t-14.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "해리단길에 등장한 감각적인 라이프스타일 스토어",
+        "subtitle": "감도 높은 시선으로 선별한 일상의 사물들 '루프트 맨션'",
+        "Classification": "place"
+    },
+    {
+        "id": "living8",
+        "indexNum": 8,
+        "img": "https://storage.heypop.kr/assets/2022/05/11135108/t-10.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "디깅? 데뷔? 다 되는 플랫폼, 바운드",
+        "subtitle": "새롭고 창의적인 콘텐츠가 생상되는 이곳",
+        "Classification": "brand"
+    },
+    {
+        "id": "living9",
+        "indexNum": 9,
+        "img": "https://storage.heypop.kr/assets/2022/05/04204039/tut.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "수공예 열풍의 중심! 터프팅 전문 공방 엔드잇",
+        "subtitle": "'드르륵 드르륵'터프팅 건을 쏘아 만드는 나만의 작품",
+        "Classification": "brand"
+    },
+    {
+        "id": "living10",
+        "indexNum": 10,
+        "img": "https://storage.heypop.kr/assets/2022/05/04112553/t-2.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "분더샵에서 식물 보고 갈래?",
+        "subtitle": "플랜트 소사이어티 1 팝업 <WE PLAY!>",
+        "Classification": "exhibition"
+    },
+    {
+        "id": "living11",
+        "indexNum": 11,
+        "img": "https://storage.heypop.kr/assets/2022/05/02183139/t.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "BGM x 프릳츠가 만든 미니 플레이리스트 북",
+        "subtitle": "인물들의 이야기와 음악을 전달하는 카세트테이프 콘셉트의 미니북",
+        "Classification": "brand"
+    }
+]

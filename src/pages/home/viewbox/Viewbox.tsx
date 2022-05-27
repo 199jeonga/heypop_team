@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 function Viewbox() {
-    const StyledDiv = styled.div`
+    const WrapDiv = styled.div`
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -18,13 +18,13 @@ function Viewbox() {
             padding: 55px 90px 0;
         }
         ${({ theme }) => theme.media.mob} {
-            max-height: none;
             display: block;
+            max-height: none;
             height: auto;
-            padding: 55px 0 0;
+            padding: 50px 0 50px;
         }
     `
-    const StyledP = styled.p`
+    const ContentP = styled.p`
         width: 100%;
         height: 25px;
         line-height: 25px;
@@ -46,27 +46,40 @@ function Viewbox() {
             color: ${({ theme }) => theme.colors.black};
         }
     `
-    const StyledImg = styled.img`
+    const LogoImg = styled.div`
         width: auto;
-        max-width: 380px;
         height: auto;
         ${({ theme }) => theme.media.mob} {
-            ${({ theme }) => theme.styles.center}
-            width: 50.667vw;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            width: auto;
+            max-width: 360px;
+            height: auto;
+            padding-left: 20px;
+            ${({ theme }) => theme.media.tab} {
+                width: ${({ theme }) => theme.vwTab(340)};
+            }
+            ${({ theme }) => theme.media.mob} {
+                width: ${({ theme }) => theme.vwMob(340)};
+            }
         }
     `
 
     return (
-        <StyledDiv>
-            <StyledP>
+        <WrapDiv>
+            <ContentP>
                 <span>DISCOVER YOUR FAVORITES</span>
                 <span>WITH CREATOR, BY CURATOR, FROM BRAND</span>
-            </StyledP>
-            <StyledImg
-                src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
-                alt="heypop"
-            />
-        </StyledDiv>
+            </ContentP>
+            <LogoImg>
+                <img
+                    src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
+                    alt="heypop"
+                />
+            </LogoImg>
+        </WrapDiv>
     )
 }
 export default Viewbox

@@ -16,20 +16,28 @@ const vwLap = (objSize: number) => `${(objSize / size.lap) * 100}vw;`
 
 // responsive
 const media: { [key: string]: string } = {
-    mob: `@media screen and (max-width: ${size.mob}px)`,
-    tab: `@media screen and (min-width:${size.mob - 1}px) and (max-width: ${
-        size.tab
+    mob: `@media screen and (max-width: ${size.mob - 1}px)`,
+    tab: `@media screen and (min-width:${size.mob}px) and (max-width: ${
+        size.tab - 1
     }px)`,
-    lap: `@media screen and (min-width:${size.tab - 1}px) and (max-width: ${
-        size.lap
+    lap: `@media screen and (min-width:${size.tab}px) and (max-width: ${
+        size.lap - 1
     }px)`,
-    pc: `@media screen and (min-width: ${size.lap - 1}px)`,
+    pc: `@media screen and (min-width: ${size.lap}px)`,
+    maxHeader: `@media screen and (min-width: ${size.lap}px)`,
+    minHeader: `@media screen and (max-width: ${size.lap - 1}px)`,
+    maxTab: `@media screen and (min-width: ${size.tab}px)`,
+    minTab: `@media screen and (max-width: ${size.tab - 1}px)`,
+    maxMob: `@media screen and (min-width: ${size.mob}px)`,
+    minMob: `@media screen and (max-width: ${size.mob - 1}px)`,
 }
 
 // style 적용 시 반복적으로 사용하는 코드
 const styles: { [key: string]: string } = {
     center: 'margin:0 auto;',
-    blind: 'display: block; width: 1; height: 1; position: absolute; z-index:-1; overflow: hidden;',
+    centerPositon:
+        'position: absolute; transform: translateX(-50%); margin-left: 50%;',
+    blind: 'border: 0; clip: rect(0 0 0 0); clip-path: inset(50%); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap;',
     displayNone:
         'display: block; width: 0; height: 0; position: absolute; z-index:-1; overflow: hidden;',
     full: 'display:block; width:100%; height:100%;',
