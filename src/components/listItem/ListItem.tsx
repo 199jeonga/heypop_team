@@ -60,7 +60,9 @@ interface Iprops {
 function SliderInner({ id, img, title, subtitle, Classification }: Iprops) {
     return (
         <WrapDiv>
-            <StyledLink to={`${process.env.PUBLIC_URL}/${id}`}>
+            <StyledLink
+                to={`${process.env.PUBLIC_URL}/${Classification}/${id}`}
+            >
                 <img src={img} alt={subtitle} />
             </StyledLink>
             <ContentDiv>
@@ -71,7 +73,9 @@ function SliderInner({ id, img, title, subtitle, Classification }: Iprops) {
                         {Classification}
                     </StyledLink>
                 </h5>
-                <StyledLink to={`${process.env.PUBLIC_URL}/${id}`}>
+                <StyledLink
+                    to={`${process.env.PUBLIC_URL}/${Classification}/${id}`}
+                >
                     <span>{title}</span>
                 </StyledLink>
                 <div>{subtitle}</div>

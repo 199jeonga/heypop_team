@@ -68,8 +68,8 @@ const WrapDiv = styled.div`
         z-index: 100;
         width: 36px;
         height: 36px;
+
         &::before {
-            transition: all 500ms ease;
             color: ${({ theme }) => theme.colors.black};
             opacity: 0.15;
             font-size: 36px;
@@ -110,7 +110,7 @@ function SliderBox({ title, jsonDataLink }: SliderProps) {
         className: 'center',
         infinite: true,
         slidesToShow: 3,
-        speed: 500,
+        speed: 300,
         responsive: [
             {
                 breakpoint: 1024,

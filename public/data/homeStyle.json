@@ -1,0 +1,90 @@
+[
+    {
+        "id": "living1",
+        "indexNum": 1,
+        "img": "https://storage.heypop.kr/assets/2022/05/27144312/main_p-1.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "나이키가 분해 가능한 신발을 만드는 이유",
+        "subtitle": "지속가능한 ISPA LINK 모델 출시",
+        "Classification": "brand"
+    },
+    {
+        "id": "living2",
+        "indexNum": 2,
+        "img": "https://storage.heypop.kr/assets/2022/05/25112007/main_p.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "항공 승무원의 근무화를 구매할 수 있다?",
+        "subtitle": "에어로케이항공 x 마더그라운드, 운동화 L001 AERO K 출시",
+        "Classification": "brand"
+    },
+    {
+        "id": "living3",
+        "indexNum": 3,
+        "img": "https://storage.heypop.kr/assets/2022/05/24122124/main_01.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "태오양 스튜디오의 향 브랜드, 시낭",
+        "subtitle": "미래와 우주의 기억을 향으로 담다",
+        "Classification": "brand"
+    },
+    {
+        "id": "living4",
+        "indexNum": 4,
+        "img": "https://storage.heypop.kr/assets/2022/05/23175655/andt.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "앤아더스토리즈, 여름 겨냥한 볼드 휴 컬렉션 론칭",
+        "subtitle": "페스티벌의 열기처럼 화려한 컬러와 패턴!",
+        "Classification": "brand"
+    },
+    {
+        "id": "living5",
+        "indexNum": 5,
+        "img": "https://storage.heypop.kr/assets/2022/05/20154335/t-24.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "희망을 전하는 파란 몬스터!",
+        "subtitle": "피지컬에듀케이션디파트먼트 x 팀코믹스 협업 컬렉션",
+        "Classification": "brand"
+    },
+    {
+        "id": "living6",
+        "indexNum": 6,
+        "img": "https://storage.heypop.kr/assets/2022/05/20143011/t-23.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "루이비통 x 나이키, 버질 아블로 '에어포스 1' 출시",
+        "subtitle": "총 9가지 에디션으로 만나는 버질 아블로의 감성",
+        "Classification": "brand"
+    },
+    {
+        "id": "living7",
+        "indexNum": 7,
+        "img": "https://storage.heypop.kr/assets/2022/05/19174636/main-3.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "리바이스의 감성을 담은 뮤직 콘서트",
+        "subtitle": "최초의 데님 149주년 기념 <Levi's 501 Day 뮤직 콘서트>",
+        "Classification": "brand"
+    },
+    {
+        "id": "living8",
+        "indexNum": 8,
+        "img": "https://storage.heypop.kr/assets/2022/05/17104043/gt.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "혁신적인 디자인으로 MZ세대를 사로잡은",
+        "subtitle": "비건 코스메틱 브랜드 '무지개맨션'",
+        "Classification": "brand"
+    },
+    {
+        "id": "living9",
+        "indexNum": 9,
+        "img": "https://storage.heypop.kr/assets/2022/05/11200327/t-12.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "YALE 무드와 무신사 테라스가 만나면?",
+        "subtitle": "<유니버시티 댄 그로서리 & 델리>",
+        "Classification": "exhibition"
+    },
+    {
+        "id": "living10",
+        "indexNum": 10,
+        "img": "https://storage.heypop.kr/assets/2022/05/11112445/t-9.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "까르띠에 체험형 팝업 <인투 더 와일드>",
+        "subtitle": "인터랙티브 요소 가득한 디지털 익스피리언스까지!",
+        "Classification": "exhibition"
+    },
+    {
+        "id": "living11",
+        "indexNum": 11,
+        "img": "https://storage.heypop.kr/assets/2022/05/09182356/t-7.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "뜨거운 바람을 가르며 신나게 달려볼끼?",
+        "subtitle": "예일 x 88 서울 협업 컬렉션과 러닝 챌린지",
+        "Classification": "brand"
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "id": "art1",
+        "indexNum": 1,
+        "img": "https://storage.heypop.kr/assets/2022/05/26104414/2%EB%8C%801-1.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "충돌·폭발·분출! 라파 실바레스의 《AIRBAG》",
+        "subtitle": "페레스 프로젝트에서 열리는 라파 실바레스의 국내 첫 개인전",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art2",
+        "indexNum": 2,
+        "img": "https://storage.heypop.kr/assets/2022/05/24145313/t-28.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "슈퍼포지션이 말하는 계절 <SQUARE NATURE Part 2>",
+        "subtitle": "뉴노멀 시대, 디지털 환경 안의 새로운 자연",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art3",
+        "indexNum": 3,
+        "img": "https://storage.heypop.kr/assets/2022/05/24112629/t-27.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "을지로 N/A에서 열리는 나이젤 샤프란의 사진전",
+        "subtitle": "상업과 예술, 일상이 어우러진 사진 미학",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art4",
+        "indexNum": 4,
+        "img": "https://storage.heypop.kr/assets/2022/05/23153205/dp-5.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "꽃망울 터지는 머리카락... 에바 알머슨 개인전",
+        "subtitle": "한국이 사랑하는 스페인 화가 에바 알머슨 대규모 전시",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art5",
+        "indexNum": 5,
+        "img": "https://storage.heypop.kr/assets/2022/05/20181544/t-26.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "SEG 라운지에서 만나는 체험형 전시",
+        "subtitle": "직접 앉고 만지며 감각하는 '지속가능성'",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art6",
+        "indexNum": 6,
+        "img": "https://storage.heypop.kr/assets/2022/05/18154040/t-21.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "푸른 도자기가 빚어내는 공명",
+        "subtitle": "올리버 비어 국내 첫 개인전 <공명 - 두개의 음>",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art7",
+        "indexNum": 7,
+        "img": "https://storage.heypop.kr/assets/2022/05/16191005/t-17.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "야외 설치 작품 통한 공간 경험의 극대화",
+        "subtitle": "소다미술관 야외전시 <층층층:WHERE WE ARE>",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art8",
+        "indexNum": 8,
+        "img": "https://storage.heypop.kr/assets/2022/05/15110218/t.jpg.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "혹시 미술관인강? '2022 아트부산'",
+        "subtitle": "국내 미술 시장의 굵직한 흐름을 만나다!",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art9",
+        "indexNum": 9,
+        "img": "https://storage.heypop.kr/assets/2022/05/12113712/t-13.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "작가 이름도, 작품명도 없는 전시?",
+        "subtitle": "<거의 정보가 없는 전시>",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art10",
+        "indexNum": 10,
+        "img": "https://storage.heypop.kr/assets/2022/05/09112413/t-6.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "신진작가 지원전 <2022 금호영아티스트> 2부",
+        "subtitle": "무니페리, 이다희, 조해나 작가의 개인전",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art11",
+        "indexNum": 11,
+        "img": "https://storage.heypop.kr/assets/2022/05/04165852/t-3.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "우리의 '몸'을 바라보는 태도",
+        "subtitle": "<한국현대미술작가조명 - 이형구>",
+        "Classification": "exhition"
+    },
+    {
+        "id": "art12",
+        "indexNum": 12,
+        "img": "https://storage.heypop.kr/assets/2022/05/05093301/main-2.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "예술가로서 팀 버튼",
+        "subtitle": "<팀 버튼 특별전 : The World of Time Burton>",
+        "Classification": "exhition"
+    }
+]

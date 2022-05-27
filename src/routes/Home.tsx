@@ -18,12 +18,12 @@ function Home() {
                 jsonDataLink="homeTrend.json"
             />
             <SliderBox1Item jsonDataLink="homeCategoryRecommended.json" />
-            <SliderBox3Item title="Design" jsonDataLink="trend.json" />
-            <SliderBox3Item title="Art" jsonDataLink="trend.json" />
+            <SliderBox3Item title="Design" jsonDataLink="homeDesign.json" />
+            <SliderBox3Item title="Art" jsonDataLink="homeArt.json" />
             <SliderBox1Item jsonDataLink="homeStories.json" />
-            <SliderBox3Item title="Living" jsonDataLink="trend.json" />
-            <SliderBox3Item title="Style" jsonDataLink="trend.json" />
-            <SliderBox3Item title="Food" jsonDataLink="trend.json" />
+            <SliderBox3Item title="Living" jsonDataLink="homeLiving.json" />
+            <SliderBox3Item title="Style" jsonDataLink="homeStyle.json" />
+            <SliderBox3Item title="Food" jsonDataLink="homeFood.json" />
             <SliderBox1Item jsonDataLink="homeAbout.json" />
         </div>
     )
