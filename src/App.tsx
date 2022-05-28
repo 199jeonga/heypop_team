@@ -9,6 +9,7 @@ function App() {
             <GlobalStyles />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/heypop_team" element={<Home />} />
             </Routes>
         </Router>
     )
