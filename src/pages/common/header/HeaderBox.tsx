@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import BackgroundBlurBox from 'pages/common/style/BackgroundBlurBox'
 import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {
@@ -116,21 +117,6 @@ function HeaderBox() {
         ${({ theme }) => theme.media.pc} {
             display: none;
         }
-    `
-    const BackgroundBlurDiv = styled.div`
-        position: fixed;
-        z-index: 1;
-        top: 70px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #000;
-        -moz-opacity: 0.3;
-        -khtml-opacity: 0.3;
-        -webkit-opacity: 0.3;
-        opacity: 0.3;
-        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
-        filter: alpha(opacity=30);
     `
     const SearchAreaDiv = styled.div`
         padding-top: 0;
@@ -255,7 +241,8 @@ function HeaderBox() {
     const searchMenuToggle = () => setShowMenuBox(!showMenuBox)
     return (
         <HeaderArea>
-            {showSearchBox && <BackgroundBlurDiv />}
+            {showSearchBox && <BackgroundBlurBox />}
+            {showNewsletterPopupBox && <BackgroundBlurBox />}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
                     <HomeIconImg
