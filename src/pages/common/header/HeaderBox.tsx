@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import BackgroundBlurBox from 'pages/common/style/BackgroundBlurBox'
+import NewsletterPopupBox from 'pages/common/popup/NewsletterPopupBox'
+import BackgroundSoftBlurBox from 'pages/common/style/BackgroundSoftBlurBox'
+import BackgroundBlurBox from 'pages/common/style/BackgroundBlurBox' // eslint-disable-line no-unused-vars
 import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {
@@ -239,10 +241,14 @@ function HeaderBox() {
     const searchBoxToggle = () => setShowSearchBox(!showSearchBox)
     const [showMenuBox, setShowMenuBox] = useState(false)
     const searchMenuToggle = () => setShowMenuBox(!showMenuBox)
+    const [showNewsletterPopupBox, setNewsletterPopupBox] = useState(false)
+    const newsletterPopupToggle = () =>
+        setNewsletterPopupBox(!showNewsletterPopupBox)
     return (
         <HeaderArea>
-            {showSearchBox && <BackgroundBlurBox />}
+            {showSearchBox && <BackgroundSoftBlurBox />}
             {showNewsletterPopupBox && <BackgroundBlurBox />}
+            {showNewsletterPopupBox && <NewsletterPopupBox />}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
                     <HomeIconImg
@@ -299,7 +305,15 @@ function HeaderBox() {
                                 <MainNavListLi>Stories,</MainNavListLi>
                                 <MainNavListLi>Store,</MainNavListLi>
                                 <MainNavListLi>About,</MainNavListLi>
-                                <MainNavListLi>Newsletter</MainNavListLi>
+                                <MainNavListLi>
+                                    <span
+                                        role="none"
+                                        onClick={newsletterPopupToggle}
+                                        onKeyDown={newsletterPopupToggle}
+                                    >
+                                        Newsletter
+                                    </span>
+                                </MainNavListLi>
                             </MainNavUl>
                         </MainNavDiv>
                     </MenuNavUlDiv>
