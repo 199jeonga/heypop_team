@@ -70,13 +70,15 @@ function HeaderBox() {
     const SubNavUl = styled.ul`
         font-size: 15px;
         color: ${({ theme }) => theme.colors.white};
-        position: absolute;
         font-weight: bold;
         cursor: pointer;
         top: 0;
         right: 0;
+        display: inline-block;
+        float: right;
         ${({ theme }) => theme.media.pc} {
             left: 0;
+            float: left;
         }
         ${({ theme }) => theme.media.mob} {
             display: flex;
@@ -92,6 +94,7 @@ function HeaderBox() {
         }
     `
     const MainNavDiv = styled.div`
+        display: inline-block;
         text-align: right;
         ${({ theme }) => theme.media.mob} {
             display: none;
