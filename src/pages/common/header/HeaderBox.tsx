@@ -250,7 +250,6 @@ function HeaderBox() {
     return (
         <HeaderArea>
             {showSearchBox && <BackgroundSoftBlurBox />}
-            {showNewsletterPopupBox && <BackgroundBlurBox />}
             {showNewsletterPopupBox && <NewsletterPopupBox />}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
