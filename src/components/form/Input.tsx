@@ -31,6 +31,7 @@ const WrapFieldset = styled.fieldset`
 `
 const TextInput = styled.input`
     display: block;
+    box-sizing: border-box;
     width: 100%;
     height: 48px;
     ${({ theme }) => theme.styles.fontBasic}

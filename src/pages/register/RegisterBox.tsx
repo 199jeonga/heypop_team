@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import PageHeader from '../../components/pageHeader/PageHeader'
-import RegisterArea from '../../components/form/Input'
+import InputArea from '../../components/form/Input'
 import CheckboxArea from '../../components/form/CheckBox'
 import ButtonArea from '../../components/form/Button'
 
@@ -11,6 +11,7 @@ const Wrap = styled.form`
     max-width: 450px;
     height: auto;
     margin-bottom: 30px;
+    padding: 0 20px;
     ${({ theme }) => theme.styles.center}
     a {
         color: ${({ theme }) => theme.colors.gray};
@@ -21,30 +22,22 @@ function RegisterBox() {
     return (
         <Wrap>
             <PageHeader HeaderContent="signup" />
-            <RegisterArea
-                legendName="이름(닉네임)"
-                inputId="nickName"
-                required
-            />
-            <RegisterArea
-                legendName="이메일 주소"
-                inputId="userEmail"
-                required
-            />
-            <RegisterArea
+            <InputArea legendName="이름(닉네임)" inputId="nickName" required />
+            <InputArea legendName="이메일 주소" inputId="userEmail" required />
+            <InputArea
                 legendName="휴대폰 번호"
                 inputId="mobileNumber"
                 placeHolder="- 없이 숫자만 입력"
                 required
             />
-            <RegisterArea legendName="생년월일" inputId="birthDay" required />
-            <RegisterArea
+            <InputArea legendName="생년월일" inputId="birthDay" required />
+            <InputArea
                 legendName="비밀번호"
                 inputId="usePassword"
                 placeHolder="최소 8자리, 대 소문자, 숫자, 특수문자 포함"
                 required
             />
-            <RegisterArea
+            <InputArea
                 legendName="비밀번호 확인"
                 inputId="confirmUsePassword"
                 required
