@@ -11,7 +11,6 @@ function HeaderBox() {
         z-index: 20000;
         height: 40px;
         padding: 0px;
-        position: fixed;
         top: 0;
         left: 0;
         right: 0;
