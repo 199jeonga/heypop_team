@@ -240,6 +240,36 @@ function HeaderBox() {
     const MenuIconPartDiv = styled.div`
         padding-top: 40vh;
     `
+    const NewsletterInnerDiv = styled.div`
+        position: fixed;
+        max-width: 850px;
+        width: 850px;
+        height: 405px;
+        left: 50%;
+        top: 50%;
+        margin-left: -425px;
+        background: #000;
+        margin-top: -200px;
+        padding: 45px 40px 50px 40px;
+    `
+    const CloseDiv = styled.div`
+        position: absolute;
+        z-index: 31000;
+        top: -50px;
+        right: 0px;
+        display: block;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    `
     const [showSearchBox, setShowSearchBox] = useState(false)
     const searchBoxToggle = () => setShowSearchBox(!showSearchBox)
     const [showMenuBox, setShowMenuBox] = useState(false)
@@ -249,8 +279,23 @@ function HeaderBox() {
         setNewsletterPopupBox(!showNewsletterPopupBox)
     return (
         <HeaderArea>
+            {showNewsletterPopupBox && (
+                <NewsletterInnerDiv>
+                    <CloseDiv
+                        role="none"
+                        onClick={newsletterPopupToggle}
+                        onKeyDown={newsletterPopupToggle}
+                    >
+                        <img
+                            src="https://storage.oneslist.com/assets/2021/11/19161050/icon_modal_close.png"
+                            alt="close"
+                        />
+                    </CloseDiv>
+                    <NewsletterPopupBox />
+                    <BackgroundBlurBox />
+                </NewsletterInnerDiv>
+            )}
             {showSearchBox && <BackgroundSoftBlurBox />}
-            {showNewsletterPopupBox && <NewsletterPopupBox />}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
                     <HomeIconImg
