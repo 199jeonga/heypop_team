@@ -1,13 +1,18 @@
 import React from 'react'
+// import styled, { CSSProp } from 'styled-components'
 import styled from 'styled-components'
 
 interface Iprop {
     content: string
+    bgColor?: string
+    borderColor?: string
+    textColor?: string
 }
+
 const WrapDiv = styled.div`
     width: 100%;
     height: auto;
-    margin: 40px 0 5px;
+    margin: 5px 0;
     button {
         width: 100%;
         min-width: 250px;
@@ -22,10 +27,19 @@ const WrapDiv = styled.div`
         cursor: pointer;
     }
 `
-function Button({ content }: Iprop) {
+function Button({ content, bgColor, borderColor, textColor }: Iprop) {
     return (
         <WrapDiv>
-            <button type="submit">{content}</button>
+            <button
+                type="submit"
+                style={{
+                    backgroundColor: bgColor,
+                    border: `${borderColor} 1px solid`,
+                    color: textColor,
+                }}
+            >
+                {content}
+            </button>
         </WrapDiv>
     )
 }

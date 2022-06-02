@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {
@@ -249,6 +250,12 @@ function HeaderBox() {
     const MenuIconPartDiv = styled.div`
         padding-top: 40vh;
     `
+    const StyledLink = styled(Link)`
+        word-break: keep-all;
+        color: ${({ theme }) => theme.colors.white};
+        text-decoration: none;
+    `
+
     const [showSearchBox, setShowSearchBox] = useState(false)
     const searchBoxToggle = () => setShowSearchBox(!showSearchBox)
     const [showMenuBox, setShowMenuBox] = useState(false)
@@ -265,8 +272,12 @@ function HeaderBox() {
 
                     <MenuNavUlDiv>
                         <SubNavUl>
-                            <NavListLi>LOGIN</NavListLi>
-                            <NavListLi>SIGNUP</NavListLi>
+                            <NavListLi>
+                                <StyledLink to="/login">LOGIN</StyledLink>
+                            </NavListLi>
+                            <NavListLi>
+                                <StyledLink to="/register">SIGNUP</StyledLink>
+                            </NavListLi>
                             <NavListLi>
                                 <span
                                     role="none"

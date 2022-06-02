@@ -7,6 +7,7 @@ interface Iprop {
     inputLink?: any
     otherLink?: any
     firstBox?: any
+    margin?: string
 }
 const WrapFieldset = styled.fieldset`
     width: 100%;
@@ -38,9 +39,10 @@ function CheckBox({
     inputLink,
     otherLink,
     firstBox,
+    margin,
 }: Iprop) {
     return (
-        <WrapFieldset>
+        <WrapFieldset style={{ margin }}>
             <legend>{legendName}</legend>
             {firstBox ? <PaddingtopDiv /> : null}
             <label htmlFor={inputId}>
