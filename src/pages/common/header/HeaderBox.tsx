@@ -265,10 +265,12 @@ function HeaderBox() {
             {showSearchBox && <BackgroundBlurDiv />}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
-                    <HomeIconImg
-                        alt="home"
-                        src={`${process.env.PUBLIC_URL}/images/icon_home.png`}
-                    />
+                    <StyledLink to="/">
+                        <HomeIconImg
+                            alt="home"
+                            src={`${process.env.PUBLIC_URL}/images/icon_home.png`}
+                        />
+                    </StyledLink>
 
                     <MenuNavUlDiv>
                         <SubNavUl>
