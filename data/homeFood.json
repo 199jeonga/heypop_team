@@ -1,0 +1,90 @@
+[
+    {
+        "id": "food1",
+        "indexNum": 1,
+        "img": "https://storage.heypop.kr/assets/2022/05/25160856/main-4-scaled.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "휴롬의 건강한 부엌으로 초대합니다",
+        "subtitle": "주스로 한 끼 식사를!",
+        "Classification": "brand"
+    },
+    {
+        "id": "food2",
+        "indexNum": 2,
+        "img": "https://storage.heypop.kr/assets/2022/05/25142514/cocat-scaled.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "병뚜껑과 하나가 된 코카콜라 페트병",
+        "subtitle": "분리수거가 제일 쉬웠어요",
+        "Classification": "brand"
+    },
+    {
+        "id": "food3",
+        "indexNum": 3,
+        "img": "https://storage.heypop.kr/assets/2022/05/11124119/ct2.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "성수에서 만난 작업하기 좋은 카페 5",
+        "subtitle": "노트북 챙겨 집 나서볼까?",
+        "Classification": "place"
+    },
+    {
+        "id": "food4",
+        "indexNum": 4,
+        "img": "https://storage.heypop.kr/assets/2022/04/27113637/t-29.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "아트북과 즐기는 칵테일 한 잔!",
+        "subtitle": "한국 론칭 10주년, 새로워진 애술린",
+        "Classification": "place"
+    },
+    {
+        "id": "food5",
+        "indexNum": 5,
+        "img": "https://storage.heypop.kr/assets/2022/04/26101917/MAIN-18.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "루이 비통의 레스토랑, 베일을 벗다",
+        "subtitle": "'피에르 상 at 루이 비통' 팝업 레스토랑",
+        "Classification": "place"
+    },
+    {
+        "id": "food6",
+        "indexNum": 6,
+        "img": "https://storage.heypop.kr/assets/2022/04/20204409/main-13-scaled.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "웰컴 투 빈티지 초콜릿 하우스",
+        "subtitle": "롯데제과 x 프로젝트렌트, 2022 가나 초콜릿 하우스",
+        "Classification": "place"
+    },
+    {
+        "id": "food7",
+        "indexNum": 7,
+        "img": "https://storage.heypop.kr/assets/2022/04/07175510/t-9.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "진짜 달걀은 아니지만 달걀 맛이 난다...?",
+        "subtitle": "잇 저스트의 녹두로 만든 대체 달걀!",
+        "Classification": "brand"
+    },
+    {
+        "id": "food8",
+        "indexNum": 8,
+        "img": "https://storage.heypop.kr/assets/2022/03/30212417/Brand2.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "기후변화 해결에 도움이 되는 맥주?",
+        "subtitle": "파타고니아 x 도그피쉬 헤드 브루어리 컨자 필스터",
+        "Classification": "brand"
+    },
+    {
+        "id": "food9",
+        "indexNum": 9,
+        "img": "https://storage.heypop.kr/assets/2022/03/28184337/main1.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "구찌에서 럭셔리 한 스푼 하실래요?",
+        "subtitle": "세계에서 네 번째 구찌 오스테리아, 서울 오픈",
+        "Classification": "place"
+    },
+    {
+        "id": "food10",
+        "indexNum": 10,
+        "img": "https://storage.heypop.kr/assets/2022/03/22140831/ft.webp?w=800&h=400&f=jpg&q=100",
+        "title": "미래의 탄산음료는 파란색",
+        "subtitle": "지구를 지키는 새로운 음료의 탄생",
+        "Classification": "brand"
+    },
+    {
+        "id": "food11",
+        "indexNum": 11,
+        "img": "https://storage.heypop.kr/assets/2022/03/17161527/aomg.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "음악 들려주는 신개념 맥주?",
+        "subtitle": "사이먼 도미닉의 다크룸에서 맥주 한 캔!",
+        "Classification": "brand"
+    }
+]

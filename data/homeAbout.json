@@ -1,0 +1,12 @@
+[
+    {
+        "id": "category2",
+        "indexNum": 2,
+        "imgBig": "https://storage.heypop.kr/assets/2021/05/09190048/hey2.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2021/05/09185408/2he.jpg",
+        "title": "매일 새로운 소식, 세상의 모든 팝업",
+        "subtitle": "전문 큐레이터들이 선별한 컨텐츠 커머스 플랫폼 <헤이팝>을 소개합니다.",
+        "category": "About",
+        "link": "https://heypop.kr/about/"
+    }
+]

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/heypop_team/static/css/main.14a431cf.css",
+    "main.js": "/heypop_team/static/js/main.f619df9d.js",
+    "static/js/787.7e237dff.chunk.js": "/heypop_team/static/js/787.7e237dff.chunk.js",
+    "static/media/slick.svg": "/heypop_team/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/heypop_team/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/heypop_team/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/heypop_team/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/heypop_team/index.html",
+    "main.14a431cf.css.map": "/heypop_team/static/css/main.14a431cf.css.map",
+    "main.f619df9d.js.map": "/heypop_team/static/js/main.f619df9d.js.map",
+    "787.7e237dff.chunk.js.map": "/heypop_team/static/js/787.7e237dff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14a431cf.css",
+    "static/js/main.f619df9d.js"
+  ]
+}

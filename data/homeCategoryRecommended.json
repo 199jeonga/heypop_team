@@ -1,0 +1,52 @@
+[
+    {
+        "id": "category1",
+        "indexNum": 1,
+        "imgBig": "https://storage.heypop.kr/assets/2022/05/19121828/1-main.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/05/19121830/1-main_M.jpg",
+        "title": "YaLe 무드와 무신사 테라스가 만나면?",
+        "subtitle": "<유니버시티 댄 그로서리 & 델리>",
+        "category": "Style",
+        "link": "https://heypop.kr/n/32032/"
+    },
+    {
+        "id": "category2",
+        "indexNum": 2,
+        "imgBig": "https://storage.heypop.kr/assets/2022/05/19121830/2-main.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/05/19121832/2-main_M.jpg",
+        "title": "야외 설치 작품 통한 공간 경험의 극대화",
+        "subtitle": "소다미술관 야외전시 <층층층:WHERE WE ARE>",
+        "category": "Art",
+        "link": "https://heypop.kr/n/32219/"
+    },
+    {
+        "id": "category3",
+        "indexNum": 3,
+        "imgBig": "https://storage.heypop.kr/assets/2022/05/19121833/3-main.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/05/19122507/3-main_M-1.jpg",
+        "title": "지구를 생각하는 식물연구소",
+        "subtitle": "틸테이블 x 레어로우 x 선데이 플래닛 47 팝업",
+        "category": "Living",
+        "link": "https://heypop.kr/n/32431/"
+    },
+    {
+        "id": "category4",
+        "indexNum": 4,
+        "imgBig": "https://storage.heypop.kr/assets/2022/04/22112334/11_%E3%85%96%E3%85%8A.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/04/22111816/1_M.jpg",
+        "title": "디자이너에게도 부캐가 있다?",
+        "subtitle": "SWNA 스튜디오 디자이너들의 새로운 실험, 리버럴 오피스",
+        "category": "Art",
+        "link": "https://heypop.kr/n/30276/"
+    },
+    {
+        "id": "category5",
+        "indexNum": 5,
+        "imgBig": "https://storage.heypop.kr/assets/2022/05/11094703/t3.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/05/11094701/mt3.jpg",
+        "title": "50년 후 미래 집은 어떤 모습일까?",
+        "subtitle": "<하우스비전 2022 코리아 전람회>",
+        "category": "Design",
+        "link": "https://heypop.kr/"
+    }
+]
