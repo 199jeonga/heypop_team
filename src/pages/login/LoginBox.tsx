@@ -1,4 +1,3 @@
-// import React, { useEffect, useRef } from 'react'
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
@@ -18,9 +17,9 @@ const WrapDiv = styled.div`
     a {
         color: ${({ theme }) => theme.colors.gray};
     }
-    /* #naverIdLogin {
+    #naverIdLogin {
         ${({ theme }) => theme.styles.displayNone}
-    } */
+    }
 `
 const StyledLink = styled(Link)`
     display: block;
@@ -32,7 +31,6 @@ const StyledLink = styled(Link)`
 `
 
 function LoginBox() {
-    // const naverRef = useRef()
     const { naver } = window as any
 
     const Naver = () => {
@@ -51,10 +49,17 @@ function LoginBox() {
         Naver()
     }, [])
 
-    // const handleClick = () => {
-    //     naverRef.current.children[0].click()
-    // }
-
+    const handleNaver = () => {
+        if (
+            document &&
+            document?.querySelector('#naverIdLogin')?.firstChild &&
+            window !== undefined
+        ) {
+            const loginBtn: any =
+                document.getElementById('naverIdLogin')?.firstChild
+            loginBtn.click()
+        }
+    }
     return (
         <WrapDiv>
             <PageHeader HeaderContent="login" />
@@ -78,7 +83,7 @@ function LoginBox() {
             <ButtonArea
                 content="네이버로 로그인"
                 bgColor="#1FCC00"
-                // onClick={handleClick}
+                onClick={handleNaver}
             />
             <ButtonArea content="회원 가입" />
         </WrapDiv>
