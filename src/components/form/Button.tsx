@@ -7,6 +7,7 @@ interface Iprop {
     bgColor?: string
     borderColor?: string
     textColor?: string
+    id?: any
 }
 
 const WrapDiv = styled.div`
@@ -27,9 +28,9 @@ const WrapDiv = styled.div`
         cursor: pointer;
     }
 `
-function Button({ content, bgColor, borderColor, textColor }: Iprop) {
+function Button({ content, bgColor, borderColor, textColor, id }: Iprop) {
     return (
-        <WrapDiv>
+        <WrapDiv id={id}>
             <button
                 type="submit"
                 style={{
