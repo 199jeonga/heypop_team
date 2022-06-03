@@ -210,18 +210,15 @@ function HeaderBox() {
         }
     `
     const MenuAreaDiv = styled.div`
-        position: unset;
+        position: relative;
         top: 0;
         height: 100vh;
         left: 0;
         right: 0;
         bottom: 0;
         background: #000;
-        z-index: 13;
+        z-index: 20000;
         overflow-y: hidden;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
         font-size: 16px;
         ul {
             font-size: 22px;
@@ -240,16 +237,34 @@ function HeaderBox() {
         padding-top: 40vh;
     `
     const NewsletterInnerDiv = styled.div`
+        z-index: 50000;
         position: fixed;
-        max-width: 850px;
-        width: 850px;
-        height: 405px;
         left: 50%;
+        transform: translateX(-50%);
         top: 50%;
-        margin-left: -425px;
         background: #000;
+        width: 840px;
+        max-width: 840px;
+        height: 405px;
         margin-top: -200px;
         padding: 45px 40px 50px 40px;
+        ${({ theme }) => theme.media.tab} {
+            max-width: 640px;
+            max-width: 640px;
+            height: 450px;
+            margin-top: -225px;
+            padding: 35px 30px;
+        }
+        ${({ theme }) => theme.media.mob} {
+            max-width: 335px;
+            height: 400px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -10px;
+            margin-left: -10px;
+        }
     `
     const CloseDiv = styled.div`
         position: absolute;
@@ -278,6 +293,8 @@ function HeaderBox() {
         setNewsletterPopupBox(!showNewsletterPopupBox)
     return (
         <HeaderArea>
+            {showSearchBox && <BackgroundSoftBlurBox />}
+            {showNewsletterPopupBox && <BackgroundBlurBox />}
             {showNewsletterPopupBox && (
                 <NewsletterInnerDiv>
                     <CloseDiv
@@ -291,10 +308,8 @@ function HeaderBox() {
                         />
                     </CloseDiv>
                     <NewsletterPopupBox />
-                    <BackgroundBlurBox />
                 </NewsletterInnerDiv>
             )}
-            {showSearchBox && <BackgroundSoftBlurBox />}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
                     <HomeIconImg
@@ -410,7 +425,15 @@ function HeaderBox() {
                                 <MainNavListLi>Stories,</MainNavListLi>
                                 <MainNavListLi>Store,</MainNavListLi>
                                 <MainNavListLi>About,</MainNavListLi>
-                                <MainNavListLi>Newsletter</MainNavListLi>
+                                <MainNavListLi>
+                                    <span
+                                        role="none"
+                                        onClick={newsletterPopupToggle}
+                                        onKeyDown={newsletterPopupToggle}
+                                    >
+                                        Newsletter
+                                    </span>
+                                </MainNavListLi>
                             </MainNavUl>
                         </MenuUlPartDiv>
                     </MenuInnerDiv>

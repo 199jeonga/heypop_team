@@ -10,10 +10,10 @@ function BackgroundBlurBox() {
         right: 0;
         bottom: 0;
         background-color: ${({ theme }) => theme.colors.black};
-        -moz-opacity: 0.5;
-        -khtml-opacity: 0.5;
-        -webkit-opacity: 0.5;
-        opacity: 0.5;
+        -moz-opacity: 0.7;
+        -khtml-opacity: 0.7;
+        -webkit-opacity: 0.7;
+        opacity: 0.7;
         -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
         filter: alpha(opacity=70);
     `
