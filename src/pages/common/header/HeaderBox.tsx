@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import NewsletterPopupBox from 'pages/common/popup/NewsletterPopupBox'
+import BackgroundSoftBlurBox from 'pages/common/style/BackgroundSoftBlurBox'
+import BackgroundBlurBox from 'pages/common/style/BackgroundBlurBox' // eslint-disable-line no-unused-vars
+import { Link } from 'react-router-dom'        
 import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {
@@ -9,7 +12,6 @@ function HeaderBox() {
         z-index: 20000;
         height: 40px;
         padding: 0px;
-        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -68,13 +70,15 @@ function HeaderBox() {
     const SubNavUl = styled.ul`
         font-size: 15px;
         color: ${({ theme }) => theme.colors.white};
-        position: absolute;
         font-weight: bold;
         cursor: pointer;
         top: 0;
         right: 0;
+        display: inline-block;
+        float: right;
         ${({ theme }) => theme.media.pc} {
             left: 0;
+            float: left;
         }
         ${({ theme }) => theme.media.mob} {
             display: flex;
@@ -90,6 +94,7 @@ function HeaderBox() {
         }
     `
     const MainNavDiv = styled.div`
+        display: inline-block;
         text-align: right;
         ${({ theme }) => theme.media.mob} {
             display: none;
@@ -117,21 +122,6 @@ function HeaderBox() {
         ${({ theme }) => theme.media.pc} {
             display: none;
         }
-    `
-    const BackgroundBlurDiv = styled.div`
-        position: fixed;
-        z-index: 1;
-        top: 70px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #000;
-        -moz-opacity: 0.3;
-        -khtml-opacity: 0.3;
-        -webkit-opacity: 0.3;
-        opacity: 0.3;
-        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
-        filter: alpha(opacity=30);
     `
     const SearchAreaDiv = styled.div`
         padding-top: 0;
@@ -221,18 +211,15 @@ function HeaderBox() {
         }
     `
     const MenuAreaDiv = styled.div`
-        position: unset;
+        position: relative;
         top: 0;
         height: 100vh;
         left: 0;
         right: 0;
         bottom: 0;
         background: #000;
-        z-index: 13;
+        z-index: 20000;
         overflow-y: hidden;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
         font-size: 16px;
         ul {
             font-size: 22px;
@@ -250,6 +237,54 @@ function HeaderBox() {
     const MenuIconPartDiv = styled.div`
         padding-top: 40vh;
     `
+    const NewsletterInnerDiv = styled.div`
+        z-index: 50000;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        background: #000;
+        width: 840px;
+        max-width: 840px;
+        height: 405px;
+        margin-top: -200px;
+        padding: 45px 40px 50px 40px;
+        ${({ theme }) => theme.media.tab} {
+            max-width: 640px;
+            max-width: 640px;
+            height: 450px;
+            margin-top: -225px;
+            padding: 35px 30px;
+        }
+        ${({ theme }) => theme.media.mob} {
+            max-width: 335px;
+            height: 400px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+    `
+    const CloseDiv = styled.div`
+        position: absolute;
+        z-index: 31000;
+        top: -50px;
+        right: 0px;
+        display: block;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    `
     const StyledLink = styled(Link)`
         word-break: keep-all;
         color: ${({ theme }) => theme.colors.white};
@@ -260,9 +295,28 @@ function HeaderBox() {
     const searchBoxToggle = () => setShowSearchBox(!showSearchBox)
     const [showMenuBox, setShowMenuBox] = useState(false)
     const searchMenuToggle = () => setShowMenuBox(!showMenuBox)
+    const [showNewsletterPopupBox, setNewsletterPopupBox] = useState(false)
+    const newsletterPopupToggle = () =>
+        setNewsletterPopupBox(!showNewsletterPopupBox)
     return (
         <HeaderArea>
-            {showSearchBox && <BackgroundBlurDiv />}
+            {showSearchBox && <BackgroundSoftBlurBox />}
+            {showNewsletterPopupBox && <BackgroundBlurBox />}
+            {showNewsletterPopupBox && (
+                <NewsletterInnerDiv>
+                    <CloseDiv
+                        role="none"
+                        onClick={newsletterPopupToggle}
+                        onKeyDown={newsletterPopupToggle}
+                    >
+                        <img
+                            src="https://storage.oneslist.com/assets/2021/11/19161050/icon_modal_close.png"
+                            alt="close"
+                        />
+                    </CloseDiv>
+                    <NewsletterPopupBox />
+                </NewsletterInnerDiv>
+            )}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
                     <StyledLink to="/">
@@ -325,7 +379,15 @@ function HeaderBox() {
                                 <MainNavListLi>Stories,</MainNavListLi>
                                 <MainNavListLi>Store,</MainNavListLi>
                                 <MainNavListLi>About,</MainNavListLi>
-                                <MainNavListLi>Newsletter</MainNavListLi>
+                                <MainNavListLi>
+                                    <span
+                                        role="none"
+                                        onClick={newsletterPopupToggle}
+                                        onKeyDown={newsletterPopupToggle}
+                                    >
+                                        Newsletter
+                                    </span>
+                                </MainNavListLi>
                             </MainNavUl>
                         </MainNavDiv>
                     </MenuNavUlDiv>
@@ -376,7 +438,15 @@ function HeaderBox() {
                                 <MainNavListLi>Stories,</MainNavListLi>
                                 <MainNavListLi>Store,</MainNavListLi>
                                 <MainNavListLi>About,</MainNavListLi>
-                                <MainNavListLi>Newsletter</MainNavListLi>
+                                <MainNavListLi>
+                                    <span
+                                        role="none"
+                                        onClick={newsletterPopupToggle}
+                                        onKeyDown={newsletterPopupToggle}
+                                    >
+                                        Newsletter
+                                    </span>
+                                </MainNavListLi>
                             </MainNavUl>
                         </MenuUlPartDiv>
                     </MenuInnerDiv>
