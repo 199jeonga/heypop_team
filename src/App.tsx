@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from 'routes/Home'
 import Register from 'routes/Register'
 import Login from 'routes/Login'
+import NaverCallback from 'routes/NaverCallback'
 import GlobalStyles from 'GlobalStyles'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/heypop_team" element={<Home />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/navercallback" element={<NaverCallback />} />
             </Routes>
         </Router>
     )

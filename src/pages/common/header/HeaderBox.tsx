@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import NewsletterPopupBox from 'pages/common/popup/NewsletterPopupBox'
 import BackgroundSoftBlurBox from 'pages/common/style/BackgroundSoftBlurBox'
 import BackgroundBlurBox from 'pages/common/style/BackgroundBlurBox' // eslint-disable-line no-unused-vars
-import { Link } from 'react-router-dom'        
+import { Link } from 'react-router-dom'
 import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {

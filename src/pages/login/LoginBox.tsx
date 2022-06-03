@@ -1,3 +1,4 @@
+// import React, { useEffect, useRef } from 'react'
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
@@ -6,8 +7,6 @@ import PageHeader from '../../components/pageHeader/PageHeader'
 import InputArea from '../../components/form/Input'
 import CheckboxArea from '../../components/form/CheckBox'
 import ButtonArea from '../../components/form/Button'
-
-const { naver } = window as any
 
 const WrapDiv = styled.div`
     width: 100%;
@@ -19,6 +18,9 @@ const WrapDiv = styled.div`
     a {
         color: ${({ theme }) => theme.colors.gray};
     }
+    /* #naverIdLogin {
+        ${({ theme }) => theme.styles.displayNone}
+    } */
 `
 const StyledLink = styled(Link)`
     display: block;
@@ -30,19 +32,29 @@ const StyledLink = styled(Link)`
 `
 
 function LoginBox() {
-    const initializeNaverLogin = () => {
+    // const naverRef = useRef()
+    const { naver } = window as any
+
+    const Naver = () => {
         const naverLogin = new naver.LoginWithNaverId({
             clientId: 'yR8_dDPOggmuPZvhgeI0',
-            callbackIrl: 'http://localhost:3000/',
-            isPopup: true,
-            loginButton: { type: 3, height: '47' },
+            callbackUrl: 'http://localhost:8080/',
+            isPopup: false,
+            loginButton: { color: 'green', type: 3, height: 47 },
+            callbackHandle: true,
         })
         naverLogin.init()
+        naverLogin.logout()
     }
 
     useEffect(() => {
-        initializeNaverLogin()
+        Naver()
     }, [])
+
+    // const handleClick = () => {
+    //     naverRef.current.children[0].click()
+    // }
+
     return (
         <WrapDiv>
             <PageHeader HeaderContent="login" />
@@ -62,13 +74,13 @@ function LoginBox() {
             <span>
                 <StyledLink to="/">비밀번호를 잊으셨나요?</StyledLink>
             </span>
+            <div id="naverIdLogin" />
             <ButtonArea
-                id="naverIdLogin"
                 content="네이버로 로그인"
                 bgColor="#1FCC00"
+                // onClick={handleClick}
             />
             <ButtonArea content="회원 가입" />
-            <div id="naverIdLogin" />
         </WrapDiv>
     )
 }
