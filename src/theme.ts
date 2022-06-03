@@ -41,6 +41,8 @@ const styles: { [key: string]: string } = {
     displayNone:
         'display: block; width: 0; height: 0; position: absolute; z-index:-1; overflow: hidden;',
     full: 'display:block; width:100%; height:100%;',
+    fontBasic:
+        'font-size: 16px; font-weight: 500; line-height: 160%; word-break: keep-all;',
 }
 
 // 색상 변수
@@ -48,6 +50,8 @@ const colors: { [key: string]: string } = {
     black: '#000',
     white: '#fff',
     gray: '#999',
+    deepGray: '#555',
+    lightGray: '#ddd',
     point: '#FF4E00',
 }
 
