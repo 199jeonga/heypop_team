@@ -38,7 +38,12 @@
         "react/jsx-props-no-spreading": "off",
         "react/require-default-props": "off",
         "react/jsx-no-undef": 1,
-        "prettier/prettier": ["error", { "endOfLine": "auto" }]
+        "prettier/prettier": ["error", { "endOfLine": "auto" }],
+        "no-underscore-dangle": [
+            "error",
+            { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }
+        ],
+        "import/prefer-default-export": "off"
     },
     "settings": {
         "import/resolver": {
@@ -51,5 +56,13 @@
                 "ignoreReadBeforeAssign": false
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": ["./src/_reducers/*.ts"],
+            "rules": {
+                "default-param-last": "off"
+            }
+        }
+    ]
 }

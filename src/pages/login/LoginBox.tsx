@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +7,7 @@ import InputArea from '../../components/form/Input'
 import CheckboxArea from '../../components/form/CheckBox'
 import ButtonArea from '../../components/form/Button'
 
-const WrapDiv = styled.div`
+const WrapForm = styled.form`
     width: 100%;
     max-width: 450px;
     height: auto;
@@ -31,6 +31,18 @@ const StyledLink = styled(Link)`
 `
 
 function LoginBox() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const onEmailHandle = (e: any) => {
+        setEmail(e.currentTarget.value)
+    }
+    const onPasswordlHandle = (e: any) => {
+        setPassword(e.currentTarget.value)
+    }
+    const onSubmitHandler = (e: any) => {
+        e.preventDefault()
+    }
+
     const { naver } = window as any
 
     const Naver = () => {
@@ -61,10 +73,24 @@ function LoginBox() {
         }
     }
     return (
-        <WrapDiv>
+        <WrapForm onSubmit={onSubmitHandler}>
             <PageHeader HeaderContent="login" />
-            <InputArea legendName="이메일 주소" inputId="email" required />
-            <InputArea legendName="비밀번호" inputId="password" required />
+            <InputArea
+                legendName="이메일 주소"
+                inputId="email"
+                type="email"
+                required
+                onChange={onEmailHandle}
+                value={email}
+            />
+            <InputArea
+                legendName="비밀번호"
+                inputId="password"
+                type="password"
+                required
+                onChange={onPasswordlHandle}
+                value={password}
+            />
             <CheckboxArea
                 legendName="로그인 상태 유지"
                 inputId="rememberme"
@@ -86,7 +112,7 @@ function LoginBox() {
                 onClick={handleNaver}
             />
             <ButtonArea content="회원 가입" />
-        </WrapDiv>
+        </WrapForm>
     )
 }
 export default LoginBox

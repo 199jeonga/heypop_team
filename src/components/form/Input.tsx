@@ -4,8 +4,11 @@ import styled from 'styled-components'
 interface Iprops {
     legendName: string
     inputId: string
+    type: string
     placeHolder?: string
     required?: any
+    onChange: any
+    value: any
 }
 
 const WrapFieldset = styled.fieldset`
@@ -47,19 +50,28 @@ const TextInput = styled.input`
         color: ${({ theme }) => theme.colors.lightGray};
     }
 `
-function InputArea({ legendName, inputId, placeHolder, required }: Iprops) {
+function InputArea({
+    legendName,
+    inputId,
+    type,
+    placeHolder,
+    required,
+    onChange,
+    value,
+}: Iprops) {
     return (
-        <WrapFieldset>
+        <WrapFieldset onChange={onChange}>
             <legend>{legendName}</legend>
             <label htmlFor={inputId}>
                 {legendName}
                 {required ? <span title="필수">*</span> : null}
             </label>
             <TextInput
-                type="text"
+                type={type}
                 id={inputId}
                 name={inputId}
                 placeholder={placeHolder}
+                defaultValue={value}
                 required
             />
         </WrapFieldset>
