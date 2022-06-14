@@ -3,8 +3,8 @@ import Viewbox from 'pages/home/viewbox/Viewbox'
 import NewsletterBox from 'pages/home/newsletter/NewsletterBox'
 import HeaderBox from 'pages/common/header/HeaderBox'
 import FooterBox from 'pages/common/footer/FooterBox'
-import SliderBox3Item from 'pages/common/slider/SliderBox3Item'
-import SliderBox1Item from 'pages/common/slider/SliderBox1Item'
+import SliderBox3Item from 'pages/home/slider/SliderBox3Item'
+import SliderBox1Item from 'pages/home/slider/SliderBox1Item'
 
 function Home() {
     return (
