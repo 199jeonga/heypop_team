@@ -1,5 +1,6 @@
 import React from 'react'
 import Viewbox from 'pages/home/viewbox/Viewbox'
+import NewsletterBox from 'pages/home/newsletter/NewsletterBox'
 import HeaderBox from 'pages/common/header/HeaderBox'
 import FooterBox from 'pages/common/footer/FooterBox'
 import SliderBox3Item from 'pages/common/slider/SliderBox3Item'
@@ -26,6 +27,7 @@ function Home() {
             <SliderBox3Item title="Style" jsonDataLink="homeStyle.json" />
             <SliderBox3Item title="Food" jsonDataLink="homeFood.json" />
             <SliderBox1Item jsonDataLink="homeAbout.json" />
+            <NewsletterBox />
             <FooterBox />
         </div>
     )
