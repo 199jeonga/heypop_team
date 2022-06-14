@@ -371,7 +371,11 @@ function HeaderBox() {
                         </SubNavUl>
                         <MainNavDiv>
                             <MainNavUl>
-                                <MainNavListLi>Design,</MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/design">
+                                        Design,
+                                    </StyledLink>
+                                </MainNavListLi>
                                 <MainNavListLi>Art,</MainNavListLi>
                                 <MainNavListLi>Living,</MainNavListLi>
                                 <MainNavListLi>Style,</MainNavListLi>

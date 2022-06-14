@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
-import styled from 'styled-components'
+import styled, { CSSProp } from 'styled-components'
 import axios from 'axios'
 
 import SliderArea from './SliderArea'
@@ -66,6 +66,7 @@ const WrapDiv = styled.div`
 `
 type SliderProps = {
     jsonDataLink: string
+    customStyle?: CSSProp
 }
 
 function SliderBox({ jsonDataLink }: SliderProps) {
@@ -102,7 +103,6 @@ function SliderBox({ jsonDataLink }: SliderProps) {
             },
         ],
     }
-
     return (
         <WrapSection>
             <WrapDiv>

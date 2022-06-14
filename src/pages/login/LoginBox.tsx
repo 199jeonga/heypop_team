@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import PageHeader from '../../components/pageHeader/PageHeader'
 import InputArea from '../../components/form/Input'
@@ -44,6 +44,7 @@ function LoginBox() {
     }
 
     const { naver } = window as any
+    const location = useLocation()
 
     const Naver = () => {
         const naverLogin = new naver.LoginWithNaverId({
@@ -56,9 +57,15 @@ function LoginBox() {
         naverLogin.init()
         naverLogin.logout()
     }
+    const getNaverToken = () => {
+        if (!location.hash) return
+        const token = location.hash.split('=')[1].split('&')[0]
+        console.log(token, '11')
+    }
 
     useEffect(() => {
         Naver()
+        getNaverToken()
     }, [])
 
     const handleNaver = () => {

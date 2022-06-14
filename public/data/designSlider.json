@@ -1,0 +1,22 @@
+[
+    {
+        "id": "design1",
+        "indexNum": 1,
+        "imgBig": "https://storage.heypop.kr/assets/2022/05/31152120/t-36.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/05/31152130/mt-35.jpg",
+        "title": "장애인을 위한 마우스와 키보드",
+        "subtitle": "마이크로소프트의 어댑티브 액세서리 시리즈",
+        "category": "Design",
+        "link": "https://heypop.kr/n/32032/"
+    },
+    {
+        "id": "design2",
+        "indexNum": 2,
+        "imgBig": "https://storage.heypop.kr/assets/2022/06/08173941/t.png",
+        "imgMin": "https://storage.heypop.kr/assets/2022/06/08173938/mt.png",
+        "title": "곁에 두고 싶은 사물을 만드는 브랜드 ‘공예가’",
+        "subtitle": "'비워서 채웁니다'",
+        "category": "Design",
+        "link": "https://heypop.kr/n/32032/"
+    }
+]
