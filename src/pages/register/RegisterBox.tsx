@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
 
 import PageHeader from '../../components/pageHeader/PageHeader'
 import InputArea from '../../components/form/Input'
 import CheckboxArea from '../../components/form/CheckBox'
 import ButtonArea from '../../components/form/Button'
+import { registerUser } from '../../_actions/userAction'
 
-const Wrap = styled.form`
+const WrapForm = styled.form`
     width: 100%;
     max-width: 450px;
     height: auto;
@@ -19,27 +22,102 @@ const Wrap = styled.form`
 `
 
 function RegisterBox() {
+    const [NickName, setNickName] = useState('')
+    const [Email, setEmail] = useState('')
+    const [MobileNumber, setMobileNumber] = useState('')
+    const [BirthDay, setBirthDay] = useState('')
+    const [UsePassword, setUsePassword] = useState('')
+    const [ConfirmUsePassword, setConfirmUsePassword] = useState('')
+    const dispatch = useDispatch()
+
+    const onNicknameHandle = (e: any) => {
+        setNickName(e.currentTarget.value)
+    }
+    const onEmailHandle = (e: any) => {
+        setEmail(e.currentTarget.value)
+    }
+    const onMobilenumberHandle = (e: any) => {
+        setMobileNumber(e.currentTarget.value)
+    }
+    const onBirthdayHandle = (e: any) => {
+        setBirthDay(e.currentTarget.value)
+    }
+    const onPasswordHandle = (e: any) => {
+        setUsePassword(e.currentTarget.value)
+    }
+    const onConfirmpasswordHandle = (e: any) => {
+        setConfirmUsePassword(e.currentTarget.value)
+    }
+    const onSubmitHandler = (e: any) => {
+        e.preventDefault()
+        if (UsePassword === ConfirmUsePassword) {
+            const body = {
+                email: Email,
+                nickName: NickName,
+                phoneNumber: MobileNumber,
+                birthDate: BirthDay,
+                password: UsePassword,
+            }
+            dispatch(registerUser(body)).then(() => {
+                alert(
+                    '가입이 정상적으로 완료되었습니다. 로그인 창으로 이동하는 기능도 넣어요~!'
+                )
+            })
+        } else {
+            alert('비밀번호가 일치하지 않습니다')
+        }
+    }
     return (
-        <Wrap>
+        <WrapForm onSubmit={onSubmitHandler}>
             <PageHeader HeaderContent="signup" />
-            <InputArea legendName="이름(닉네임)" inputId="nickName" required />
-            <InputArea legendName="이메일 주소" inputId="userEmail" required />
+            <InputArea
+                legendName="이름(닉네임)"
+                inputId="nickName"
+                type="text"
+                required
+                onChange={onNicknameHandle}
+                value={NickName}
+            />
+            <InputArea
+                legendName="이메일 주소"
+                inputId="userEmail"
+                type="email"
+                required
+                onChange={onEmailHandle}
+                value={Email}
+            />
             <InputArea
                 legendName="휴대폰 번호"
                 inputId="mobileNumber"
+                type="number"
                 placeHolder="- 없이 숫자만 입력"
                 required
+                onChange={onMobilenumberHandle}
+                value={MobileNumber}
             />
-            <InputArea legendName="생년월일" inputId="birthDay" required />
+            <InputArea
+                legendName="생년월일"
+                inputId="birthDay"
+                type="text"
+                required
+                onChange={onBirthdayHandle}
+                value={BirthDay}
+            />
             <InputArea
                 legendName="비밀번호"
                 inputId="usePassword"
+                type="password"
                 placeHolder="최소 8자리, 대 소문자, 숫자, 특수문자 포함"
                 required
+                onChange={onPasswordHandle}
+                value={UsePassword}
             />
             <InputArea
                 legendName="비밀번호 확인"
                 inputId="confirmUsePassword"
+                type="password"
+                onChange={onConfirmpasswordHandle}
+                value={ConfirmUsePassword}
                 required
             />
             <CheckboxArea
@@ -70,7 +148,7 @@ function RegisterBox() {
                 inputId="agreementNewletter"
             />
             <ButtonArea content="회원가입" />
-        </Wrap>
+        </WrapForm>
     )
 }
 export default RegisterBox
