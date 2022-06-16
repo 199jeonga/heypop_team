@@ -67,9 +67,10 @@ const WrapDiv = styled.div`
 type SliderProps = {
     jsonDataLink: string
     customStyle?: CSSProp
+    padding?: string
 }
 
-function SliderBox({ jsonDataLink }: SliderProps) {
+function SliderBox({ jsonDataLink, padding }: SliderProps) {
     const dataAddress = `./data/${jsonDataLink}`
     const [data, setData] = useState<any[]>([])
     const importData = async () => {
@@ -104,7 +105,11 @@ function SliderBox({ jsonDataLink }: SliderProps) {
         ],
     }
     return (
-        <WrapSection>
+        <WrapSection
+            style={{
+                paddingTop: padding,
+            }}
+        >
             <WrapDiv>
                 <h3>카테고리별 인기 게시글</h3>
                 <Slider {...settings}>

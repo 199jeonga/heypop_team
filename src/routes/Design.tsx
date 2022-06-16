@@ -19,6 +19,7 @@ function Design() {
             <SliderBox1Item
                 jsonDataLink="designSlider.json"
                 customStyle={customStyle}
+                padding="0"
             />
             <FooterBox />
         </WrapDiv>
