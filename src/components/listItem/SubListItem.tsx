@@ -57,11 +57,11 @@ const StyledLink = styled(Link)`
     }
 `
 interface Iprops {
-    id: string
-    img: string
-    title: string
-    subtitle: string
-    Classification: string
+    id?: string
+    img?: string
+    title?: string
+    subtitle?: string
+    Classification?: string
 }
 function SliderInner({ id, img, title, subtitle, Classification }: Iprops) {
     return (

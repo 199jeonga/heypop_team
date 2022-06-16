@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const WrapDiv = styled.div`
+    display: inline;
     width: auto;
     height: auto;
     padding: 3px 6px;
@@ -10,6 +11,8 @@ const WrapDiv = styled.div`
         width: 100%;
         height: auto;
         font-size: 12px;
+        font-weight: 400;
+        color: ${({ theme }) => theme.colors.point};
     }
 `
 function SubListItemArea() {

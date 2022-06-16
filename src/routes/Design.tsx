@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import HeaderBox from 'pages/common/header/HeaderBox'
 import FooterBox from 'pages/common/footer/FooterBox'
 import SliderBox1Item from 'pages/home/slider/SliderBox1Item'
+import SubList from '../components/listItem/SubListItem'
 
 const WrapDiv = styled.div`
     width: 100%;
@@ -21,6 +22,8 @@ function Design() {
                 customStyle={customStyle}
                 padding="0"
             />
+            {}
+            <SubList />
             <FooterBox />
         </WrapDiv>
     )
