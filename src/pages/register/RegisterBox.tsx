@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
-
 import styled from 'styled-components'
-import { useDispatch } from 'react-redux'
 
+import axios from 'axios'
 import PageHeader from '../../components/pageHeader/PageHeader'
 import InputArea from '../../components/form/Input'
 import CheckboxArea from '../../components/form/CheckBox'
 import ButtonArea from '../../components/form/Button'
-import { registerUser } from '../../_actions/userAction'
 
 const WrapForm = styled.form`
     width: 100%;
@@ -28,7 +26,7 @@ function RegisterBox() {
     const [BirthDay, setBirthDay] = useState('')
     const [UsePassword, setUsePassword] = useState('')
     const [ConfirmUsePassword, setConfirmUsePassword] = useState('')
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     const onNicknameHandle = (e: any) => {
         setNickName(e.currentTarget.value)
@@ -51,20 +49,35 @@ function RegisterBox() {
     const onSubmitHandler = (e: any) => {
         e.preventDefault()
         if (UsePassword === ConfirmUsePassword) {
-            const body = {
-                email: Email,
-                nickName: NickName,
-                phoneNumber: MobileNumber,
-                birthDate: BirthDay,
-                password: UsePassword,
-            }
-            dispatch(registerUser(body)).then(() => {
-                alert(
-                    '가입이 정상적으로 완료되었습니다. 로그인 창으로 이동하는 기능도 넣어요~!'
-                )
+            //         dispatch(registerUser(body)).then(() => {
+            //             alert(
+            //                 '가입이 정상적으로 완료되었습니다. 로그인 창으로 이동하는 기능도 넣어요~!'
+            //             )
+            //         })
+            //     } else {
+            //         alert('비밀번호가 일치하지 않습니다')
+            //     }
+            // const body = {
+            //     email: Email,
+            //     nickName: NickName,
+            //     phoneNumber: MobileNumber,
+            //     birthDate: BirthDay,
+            //     password: UsePassword,
+            // }
+            const DOMAIN = 'http://15.164.164.238:8080'
+            axios({
+                method: 'post',
+                url: `${DOMAIN}/user`,
+                data: {
+                    email: Email,
+                    password: UsePassword,
+                    nickName: NickName,
+                    phoneNumber: MobileNumber,
+                    birthDate: BirthDay,
+                },
             })
-        } else {
-            alert('비밀번호가 일치하지 않습니다')
+                .then((res) => res.data)
+                .catch((err) => console.log(err))
         }
     }
     return (
