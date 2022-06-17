@@ -1,24 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
+
+import SubListItem from './SubListItem'
 
 const WrapDiv = styled.div`
-    display: inline;
-    width: auto;
-    height: auto;
-    padding: 3px 6px;
-    border: 1px solid ${({ theme }) => theme.colors.point};
-    span {
-        width: 100%;
-        height: auto;
-        font-size: 12px;
-        font-weight: 400;
-        color: ${({ theme }) => theme.colors.point};
-    }
+    width: 100%;
 `
-function SubListItemArea() {
+
+interface IProps {
+    jsonDataLink: string
+}
+function SubListItemArea({ jsonDataLink }: IProps) {
+    const dataAddress = `./data/${jsonDataLink}`
+    const [data, setData] = useState<any[]>([])
+    const importData = async () => {
+        const jsonData = await axios.get(dataAddress, {
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+        })
+        setData(jsonData.data)
+    }
+    useEffect(() => {
+        importData()
+    }, [])
     return (
         <WrapDiv>
-            <span>HEYPOP PICK</span>
+            {data.map((item) => (
+                <SubListItem
+                    key={item}
+                    id={item.id}
+                    img={item.img}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    Classification={item.Classification}
+                    heypopPick={item.heypopPick}
+                    closed={item.closed}
+                />
+            ))}
         </WrapDiv>
     )
 }

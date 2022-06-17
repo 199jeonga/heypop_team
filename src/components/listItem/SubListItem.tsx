@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import HeyPopPick from './SubListItemArea'
+import HeyPopPick from './SubPickHeypopPick'
+import Closed from './SubClosed'
 
 const WrapDiv = styled.div`
     width: 100%;
@@ -18,6 +19,10 @@ const WrapDiv = styled.div`
             height: auto;
         }
     }
+`
+const PickDiv = styled.div`
+    width: 100%;
+    margin-bottom: 4px;
 `
 const ContentDiv = styled.div`
     width: 100%;
@@ -53,7 +58,9 @@ const StyledLink = styled(Link)`
     text-transform: uppercase;
     &:hover {
         transition: all 400ms ease;
-        filter: opacity(0.7);
+        color: ${({ theme }) => theme.colors.point};
+        text-decoration: underline;
+        text-underline-position: under;
     }
 `
 interface Iprops {
@@ -62,11 +69,24 @@ interface Iprops {
     title?: string
     subtitle?: string
     Classification?: string
+    heypopPick?: boolean
+    closed?: boolean
 }
-function SliderInner({ id, img, title, subtitle, Classification }: Iprops) {
+function SliderInner({
+    id,
+    img,
+    title,
+    subtitle,
+    Classification,
+    heypopPick,
+    closed,
+}: Iprops) {
     return (
         <WrapDiv>
-            <HeyPopPick />
+            <PickDiv>
+                {heypopPick ? <HeyPopPick /> : null}
+                {closed ? <Closed /> : null}
+            </PickDiv>
             <StyledLink
                 to={`${process.env.PUBLIC_URL}/${Classification}/${id}`}
             >

@@ -51,8 +51,8 @@
         "title": "로컬 디자인으로 물든 ‘2022 부산디자인위크’",
         "subtitle": "요즘 디자인 트렌드의 집합소!",
         "Classification": "EXHIBITION",
-        "heypopPick": false,
-        "close": true
+        "heypopPick": true,
+        "closed": true
     },
     {
         "id": "design7",

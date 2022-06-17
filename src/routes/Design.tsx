@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import HeaderBox from 'pages/common/header/HeaderBox'
 import FooterBox from 'pages/common/footer/FooterBox'
 import SliderBox1Item from 'pages/home/slider/SliderBox1Item'
-import SubList from '../components/listItem/SubListItem'
+import SubList from '../components/listItem/SubListItemArea'
 
 const WrapDiv = styled.div`
     width: 100%;
@@ -13,6 +13,7 @@ const WrapDiv = styled.div`
 const customStyle = css`
     background-color: #f00;
 `
+
 function Design() {
     return (
         <WrapDiv>
@@ -22,8 +23,10 @@ function Design() {
                 customStyle={customStyle}
                 padding="0"
             />
-            {}
-            <SubList />
+            {/* {data.map((i) => (
+                <SubList key={i} />
+            ))} */}
+            <SubList jsonDataLink="designTop9.json" />
             <FooterBox />
         </WrapDiv>
     )

@@ -434,7 +434,9 @@ function HeaderBox() {
                     <MenuInnerDiv>
                         <MenuUlPartDiv>
                             <MainNavUl>
-                                <MainNavListLi>Design,</MainNavListLi>
+                                <StyledLink to="/design">
+                                    <MainNavListLi>Design,</MainNavListLi>
+                                </StyledLink>
                                 <MainNavListLi>Art,</MainNavListLi>
                                 <MainNavListLi>Living,</MainNavListLi>
                                 <MainNavListLi>Style,</MainNavListLi>
