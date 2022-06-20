@@ -5,7 +5,23 @@ import axios from 'axios'
 import SubListItem from './SubListItem'
 
 const WrapDiv = styled.div`
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    max-width: 1057px;
+    height: auto;
+    margin: auto;
+    padding-top: 80px;
+    ${({ theme }) => theme.media.maxTab} {
+        width: ${({ theme }) => theme.vwLap(1057)};
+    }
+    ${({ theme }) => theme.media.tab} {
+        width: ${({ theme }) => theme.vwTab(800)};
+    }
+    ${({ theme }) => theme.media.mob} {
+        width: ${({ theme }) => theme.vwMob(690)};
+    }
 `
 
 interface IProps {
@@ -38,6 +54,7 @@ function SubListItemArea({ jsonDataLink }: IProps) {
                     Classification={item.Classification}
                     heypopPick={item.heypopPick}
                     closed={item.closed}
+                    popUp={item.popUp}
                 />
             ))}
         </WrapDiv>

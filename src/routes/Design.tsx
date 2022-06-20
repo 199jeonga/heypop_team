@@ -5,6 +5,7 @@ import HeaderBox from 'pages/common/header/HeaderBox'
 import FooterBox from 'pages/common/footer/FooterBox'
 import SliderBox1Item from 'pages/home/slider/SliderBox1Item'
 import SubList from '../components/listItem/SubListItemArea'
+import Button from '../components/form/LoadMoreButton'
 
 const WrapDiv = styled.div`
     width: 100%;
@@ -23,10 +24,14 @@ function Design() {
                 customStyle={customStyle}
                 padding="0"
             />
-            {/* {data.map((i) => (
-                <SubList key={i} />
-            ))} */}
             <SubList jsonDataLink="designTop9.json" />
+            <SliderBox1Item
+                jsonDataLink="designSliderBottom.json"
+                customStyle={customStyle}
+                padding="0"
+            />
+            <SubList jsonDataLink="designAll.json" />
+            <Button />
             <FooterBox />
         </WrapDiv>
     )

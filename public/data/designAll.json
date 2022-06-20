@@ -1,0 +1,190 @@
+[
+    {
+        "id": "design10",
+        "indexNum": 10,
+        "img": "https://storage.heypop.kr/assets/2022/05/31152120/t-36.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "장애인을 위한 마우스와 키보드",
+        "subtitle": "마이크로소프트의 어댑티브 액세서리 시리즈",
+        "Classification": "BRAND",
+        "heypopPick": false,
+        "closed": false
+    },
+    {
+        "id": "design11",
+        "indexNum": 11,
+        "img": "https://storage.heypop.kr/assets/2022/05/31183539/main1-M.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "베를린 아트 & 디자인 스팟 4",
+        "subtitle": "팝업 플랫폼부터 바우하우스까지",
+        "Classification": "PLACE",
+        "heypopPick": true,
+        "closed": false
+    },
+    {
+        "id": "design12",
+        "indexNum": 12,
+        "img": "https://storage.heypop.kr/assets/2022/05/30135031/t-34.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "뮌헨에서 베를린으로, iF 디자인 어워드 2022",
+        "subtitle": "2년 만에 베를린에서 열린 iF 디자인 어워드",
+        "Classification": "EXHIBITION",
+        "heypopPick": false,
+        "closed": false
+    },
+    {
+        "id": "design13",
+        "indexNum": 13,
+        "img": "https://storage.heypop.kr/assets/2022/05/25163734/t-31.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "‘덕잘알’ OTT 왓챠, 남다른 마케팅 방식",
+        "subtitle": "브랜드 고객 충성도 대상 5년 연속 1위 비결",
+        "Classification": "BRAND",
+        "heypopPick": true,
+        "closed": false
+    },
+    {
+        "id": "design14",
+        "indexNum": 14,
+        "img": "https://storage.heypop.kr/assets/2022/05/25112319/t-30.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "내 옆집에 엘사와 안나가 산다?",
+        "subtitle": "게임 ‘디즈니 드림라이트 밸리’",
+        "Classification": "BRAND",
+        "heypopPick": true,
+        "closed": false
+    },
+    {
+        "id": "design15",
+        "indexNum": 15,
+        "img": "https://storage.heypop.kr/assets/2022/05/23164212/Apple-iPod-end-of-life-iPod-Mini.png?w=800&h=400&f=jpg&q=100",
+        "title": "역사 속으로 사라지는 아이팟, 역대 디자인 보니…",
+        "subtitle": "음악은 계속된다",
+        "Classification": "BRAND",
+        "heypopPick": true,
+        "closed": false
+    },
+    {
+        "id": "design16",
+        "indexNum": 16,
+        "img": "https://storage.heypop.kr/assets/2022/05/02153133/213t.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "이일삼호의 감도 높은 공간, 카페 이일삼점",
+        "subtitle": "안락한 공간에서 커피 한 잔",
+        "Classification": "PLACE",
+        "heypopPick": true,
+        "closed": false
+    },
+    {
+        "id": "design17",
+        "indexNum": 17,
+        "img": "https://storage.heypop.kr/assets/2022/05/17115341/t-19.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "라이카 카메라 x 올라퍼 엘리아슨",
+        "subtitle": "한정 수량으로 만나는 트리노비드 8X40 ‘라이프 에디션’",
+        "Classification": "BRAND",
+        "heypopPick": false,
+        "closed": false
+    },
+    {
+        "id": "design18",
+        "indexNum": 18,
+        "img": "https://storage.heypop.kr/assets/2022/05/17101259/t-18.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "디자인, 재즈, 커뮤니티를 사랑하는 이들의 오아시스",
+        "subtitle": "부산의 디자인 스팟, 뉴포트 부산",
+        "Classification": "PLACE",
+        "heypopPick": true,
+        "closed": false
+    },
+    {
+        "id": "design19",
+        "indexNum": 19,
+        "img": "https://storage.heypop.kr/assets/2022/05/12180003/ikeat.png?w=800&h=400&f=jpg&q=100",
+        "title": "3,500여 명 서퍼들과 이케아가 함께 만든",
+        "subtitle": "큰 매력, 작은 영향 ‘코세베리아’ 컬렉션",
+        "Classification": "BRAND",
+        "heypopPick": false,
+        "closed": false
+    },
+    {
+        "id": "design20",
+        "indexNum": 20,
+        "img": "https://storage.heypop.kr/assets/2022/05/12145934/t-2.png?w=800&h=400&f=jpg&q=100",
+        "title": "온실 속 피어난 뚜까따의 작은 숲",
+        "subtitle": "<뚜까따 온실>에서 만나는 자연!",
+        "Classification": "EXHIBITION",
+        "heypopPick": false,
+        "popUp": false,
+        "closed": false
+    },
+    {
+        "id": "design21",
+        "indexNum": 21,
+        "img": "https://storage.heypop.kr/assets/2022/05/12145934/t-2.png?w=800&h=400&f=jpg&q=100",
+        "title": "온실 속 피어난 뚜까따의 작은 숲",
+        "subtitle": "<뚜까따 온실>에서 만나는 자연!",
+        "Classification": "EXHIBITION",
+        "heypopPick": false,
+        "popUp": false,
+        "closed": false
+    },
+    {
+        "id": "design22",
+        "indexNum": 22,
+        "img": "https://storage.heypop.kr/assets/2022/05/11172335/t-11.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "당신이 보고 있는 세계 지도는 틀렸다",
+        "subtitle": "책 <디자인 정치학>",
+        "Classification": "BRAND",
+        "heypopPick": true,
+        "popUp": false,
+        "closed": false
+    },
+    {
+        "id": "design23",
+        "indexNum": 23,
+        "img": "https://storage.heypop.kr/assets/2022/05/10200514/t-8.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "서울숲에서 만나는 USM 오피스 가구",
+        "subtitle": "스페이스로직과 코사이어티의 전시〈Workplace for Inspiration〉",
+        "Classification": "EXHIBITION",
+        "heypopPick": false,
+        "popUp": false,
+        "closed": true
+    },
+    {
+        "id": "design22",
+        "indexNum": 22,
+        "img": "https://storage.heypop.kr/assets/2022/05/08140206/t-5.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "창의력과 영감을 부여하는 레고의 건물들",
+        "subtitle": "레고가 만드는 건물은 어떤 모습일까?",
+        "Classification": "BRAND",
+        "heypopPick": true,
+        "popUp": false,
+        "closed": false
+    },
+    {
+        "id": "design23",
+        "indexNum": 23,
+        "img": "https://storage.heypop.kr/assets/2022/05/04175755/main.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "50년 후 미래 집은 어떤 모습일까?",
+        "subtitle": "<하우스비전 2022 코리아 전람회>",
+        "Classification": "EXHIBITION",
+        "heypopPick": true,
+        "popUp": false,
+        "closed": true
+    },
+    {
+        "id": "design24",
+        "indexNum": 24,
+        "img": "https://storage.heypop.kr/assets/2022/04/29144048/t-34.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "한옥에서 만나는 공예와 아트 전시",
+        "subtitle": "디자인하우스 멤버십 라운지 ‘갤러리 지우헌’",
+        "Classification": "PLACE",
+        "heypopPick": true,
+        "popUp": false,
+        "closed": false
+    },
+    {
+        "id": "design25",
+        "indexNum": 25,
+        "img": "https://storage.heypop.kr/assets/2022/04/29150516/%E1%84%82%E1%85%A1%E1%84%82%E1%85%A5t.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "저장하고 기록하고 해석되는 기억들",
+        "subtitle": "국립현대미술관 <나 너의 기억>展",
+        "Classification": "EXHIBITION",
+        "heypopPick": true,
+        "popUp": false,
+        "closed": false
+    }
+]

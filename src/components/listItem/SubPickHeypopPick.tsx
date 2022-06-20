@@ -16,10 +16,13 @@ const WrapDiv = styled.div`
         text-transform: uppercase;
     }
 `
-function SubPickHeypopPick() {
+interface Iprop {
+    text: string
+}
+function SubPickHeypopPick({ text }: Iprop) {
     return (
         <WrapDiv>
-            <span>heypop pick</span>
+            <span>{text}</span>
         </WrapDiv>
     )
 }

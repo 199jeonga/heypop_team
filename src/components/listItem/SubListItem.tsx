@@ -6,28 +6,38 @@ import HeyPopPick from './SubPickHeypopPick'
 import Closed from './SubClosed'
 
 const WrapDiv = styled.div`
-    width: 100%;
+    position: relative;
+    height: auto;
+    padding-bottom: 60px;
+    ${({ theme }) => theme.media.maxTab} {
+        width: ${({ theme }) => theme.vwLap(518)};
+        max-width: 518px;
+    }
     img {
-        width: 380px;
+        width: 100%;
         height: auto;
-        ${({ theme }) => theme.media.lap} {
-            width: 96%;
-            height: auto;
-        }
-        ${({ theme }) => theme.media.minTab} {
-            width: 98%;
-            height: auto;
+        &:hover {
+            transition: all 400ms ease;
+            filter: opacity(0.7);
         }
     }
 `
 const PickDiv = styled.div`
+    position: absolute;
+    top: -30px;
     width: 100%;
     margin-bottom: 4px;
+    ${({ theme }) => theme.media.minTab} {
+        ${({ theme }) => theme.styles.blind}
+    }
 `
 const ContentDiv = styled.div`
     width: 100%;
     height: auto;
-    margin: 20px 0 24px;
+    margin: 20px 0 44px;
+    ${({ theme }) => theme.media.minTab} {
+        margin-bottom: 34px;
+    }
     h5 {
         width: 100%;
         height: auto;
@@ -71,6 +81,7 @@ interface Iprops {
     Classification?: string
     heypopPick?: boolean
     closed?: boolean
+    popUp?: boolean
 }
 function SliderInner({
     id,
@@ -80,12 +91,14 @@ function SliderInner({
     Classification,
     heypopPick,
     closed,
+    popUp,
 }: Iprops) {
     return (
         <WrapDiv>
             <PickDiv>
-                {heypopPick ? <HeyPopPick /> : null}
-                {closed ? <Closed /> : null}
+                {heypopPick && <HeyPopPick text="heypop pick" />}
+                {popUp && <HeyPopPick text="pop-up-" />}
+                {closed && <Closed />}
             </PickDiv>
             <StyledLink
                 to={`${process.env.PUBLIC_URL}/${Classification}/${id}`}
