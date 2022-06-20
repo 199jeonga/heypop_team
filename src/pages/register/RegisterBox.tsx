@@ -48,30 +48,28 @@ function RegisterBox() {
     }
     const onSubmitHandler = (e: any) => {
         e.preventDefault()
-        if (UsePassword === ConfirmUsePassword) {
-            //         dispatch(registerUser(body)).then(() => {
-            //             alert(
-            //                 '가입이 정상적으로 완료되었습니다. 로그인 창으로 이동하는 기능도 넣어요~!'
-            //             )
-            //         })
-            //     } else {
-            //         alert('비밀번호가 일치하지 않습니다')
-            //     }
-            const DOMAIN = 'http://15.164.164.238:8080'
-            axios({
-                method: 'POST',
-                url: `${DOMAIN}/user`,
-                data: {
-                    email: Email,
-                    password: UsePassword,
-                    nickName: NickName,
-                    phoneNumber: MobileNumber,
-                    birthDate: BirthDay,
-                },
-            })
-                .then((res) => res.data)
-                .catch((err) => console.log(err))
+        if (UsePassword !== ConfirmUsePassword) {
+            alert('비밀번호가 다르게 입력되었습니다. 다시 확인해 주세요.')
+            return
         }
+        axios({
+            method: 'post',
+            url: 'http://15.164.164.238:8080/user',
+            data: {
+                email: Email,
+                password: UsePassword,
+                nickName: NickName,
+                phoneNumber: MobileNumber,
+                birthDate: BirthDay,
+            },
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then((res) => res.data)
+            .catch((error) => {
+                console.log(error)
+            })
     }
     return (
         <WrapForm onSubmit={onSubmitHandler}>

@@ -1,3 +1,4 @@
+// import React, { useState } from 'react'
 import React from 'react'
 import styled, { css } from 'styled-components'
 
@@ -16,6 +17,10 @@ const customStyle = css`
 `
 
 function Design() {
+    // const [sliderView, serSliderView] = useState(6)
+    // const onClick = ()=>{
+    //     serSliderView()
+    // }
     return (
         <WrapDiv>
             <HeaderBox />

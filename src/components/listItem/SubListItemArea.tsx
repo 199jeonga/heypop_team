@@ -46,7 +46,8 @@ function SubListItemArea({ jsonDataLink }: IProps) {
         <WrapDiv>
             {data.map((item) => (
                 <SubListItem
-                    key={item}
+                    // key={item}
+                    key="6"
                     id={item.id}
                     img={item.img}
                     title={item.title}

@@ -10,38 +10,34 @@ interface Iprop {
     onClick?: any
 }
 
-const WrapDiv = styled.div`
-    width: 100%;
-    height: auto;
+const WrapButton = styled.button`
     margin: 5px 0;
-    button {
-        width: 100%;
-        min-width: 250px;
-        height: auto;
-        background-color: ${({ theme }) => theme.colors.black};
-        color: ${({ theme }) => theme.colors.white};
-        text-align: center;
-        padding: 16px 20px;
-        margin-bottom: 5px;
-        font-size: 15px;
-        border: none;
-        cursor: pointer;
-    }
+    width: 100%;
+    min-width: 250px;
+    height: auto;
+    background-color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
+    text-align: center;
+    padding: 16px 20px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
 `
 function Button({ content, bgColor, borderColor, textColor, onClick }: Iprop) {
     return (
-        <WrapDiv onClick={onClick}>
-            <button
-                type="submit"
-                style={{
-                    backgroundColor: bgColor,
-                    border: `${borderColor} 1px solid`,
-                    color: textColor,
-                }}
-            >
-                {content}
-            </button>
-        </WrapDiv>
+        <WrapButton
+            onClick={onClick}
+            type="submit"
+            name="action"
+            style={{
+                backgroundColor: bgColor,
+                border: `${borderColor} 1px solid`,
+                color: textColor,
+            }}
+        >
+            {content}
+        </WrapButton>
     )
 }
 export default Button
