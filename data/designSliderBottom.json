@@ -1,0 +1,22 @@
+[
+    {
+        "id": "design3",
+        "indexNum": 3,
+        "imgBig": "https://storage.heypop.kr/assets/2022/06/03174514/main-pc.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/06/03174537/main-m.jpg",
+        "title": "100년의 역사를 품은 베를린 영화관 인테리어",
+        "subtitle": "천편일률적인 상업시설 인테리어를 거부한 베를린 영화관",
+        "category": "Design",
+        "link": "https://heypop.kr/n/33581"
+    },
+    {
+        "id": "design4",
+        "indexNum": 4,
+        "imgBig": "https://storage.heypop.kr/assets/2022/05/17101259/t-18.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/05/17101310/mt-17.jpg",
+        "title": "디자인, 재즈, 커뮤니티를 사랑하는 이들의 오아시스",
+        "subtitle": "부산의 디자인 스팟, 뉴포트 부산",
+        "category": "Design",
+        "link": "https://heypop.kr/n/32248"
+    }
+]

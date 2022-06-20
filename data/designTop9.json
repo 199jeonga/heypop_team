@@ -1,0 +1,84 @@
+[
+    {
+        "id": "design1",
+        "indexNum": 1,
+        "img": "https://storage.heypop.kr/assets/2022/06/16164811/t-20.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "분더샵 청담에서 열리는〈COLORED ENERGY〉",
+        "subtitle": "토넷, 위키노, 크바드랏의 만남",
+        "Classification": "EXHIBITION",
+        "heypopPick": false
+    },
+    {
+        "id": "design2",
+        "indexNum": 2,
+        "img": "https://storage.heypop.kr/assets/2022/06/16154228/pc-1.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "루이비통 2023 크루즈 패션쇼를 빛낸 건축가의 작품",
+        "subtitle": "루이스 칸의 철학과 탐구 정신",
+        "Classification": "BRAND",
+        "heypopPick": false
+    },
+    {
+        "id": "design3",
+        "indexNum": 3,
+        "img": "https://storage.heypop.kr/assets/2022/06/16100150/pc1.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "저절로 지갑이 열리는 부산의 디자인 숍 5",
+        "subtitle": "참새는 방앗간을 그냥 지나칠 수 없는 법!",
+        "Classification": "PLACE",
+        "heypopPick": true
+    },
+    {
+        "id": "design4",
+        "indexNum": 4,
+        "img": "https://storage.heypop.kr/assets/2022/06/10182938/main-pc-1.png?w=800&h=400&f=jpg&q=100",
+        "title": "2022 밀라노 디자인 위크에서 만난 홈 컬렉션",
+        "subtitle": "패션 브랜드의 감각적인 라이프스타일",
+        "Classification": "EXHIBITION",
+        "heypopPick": true
+    },
+    {
+        "id": "design5",
+        "indexNum": 5,
+        "img": "https://storage.heypop.kr/assets/2022/06/09175059/t-8-scaled.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "킨키로봇, 진로 x 그라플렉스 협업 컬렉션 공개",
+        "subtitle": "두꺼비를 담은 인센스 챔버와 블랭킷?",
+        "Classification": "BRAND",
+        "heypopPick": false
+    },
+    {
+        "id": "design6",
+        "indexNum": 6,
+        "img": "https://storage.heypop.kr/assets/2022/06/09142811/2022BDW_t.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "로컬 디자인으로 물든 ‘2022 부산디자인위크’",
+        "subtitle": "요즘 디자인 트렌드의 집합소!",
+        "Classification": "EXHIBITION",
+        "heypopPick": true,
+        "closed": true
+    },
+    {
+        "id": "design7",
+        "indexNum": 7,
+        "img": "https://storage.heypop.kr/assets/2022/06/08173941/t.png?w=800&h=400&f=jpg&q=100",
+        "title": "곁에 두고 싶은 사물을 만드는 브랜드 ‘공예가’",
+        "subtitle": "“비워서 채웁니다”",
+        "Classification": "BRAND",
+        "heypopPick": false
+    },
+    {
+        "id": "design8",
+        "indexNum": 8,
+        "img": "https://storage.heypop.kr/assets/2022/06/03174514/main-pc.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "100년의 역사를 품은 베를린 영화관 인테리어",
+        "subtitle": "천편일률적인 상업시설 인테리어를 거부한 베를린 영화관",
+        "Classification": "PLACE",
+        "heypopPick": false
+    },
+    {
+        "id": "design9",
+        "indexNum": 9,
+        "img": "https://storage.heypop.kr/assets/2022/05/31180502/main-p.jpg?w=800&h=400&f=jpg&q=100",
+        "title": "한국의 미니멀리즘을 담은 안경 브랜드 윤 서울",
+        "subtitle": "베를린에서 사랑받은 안경, 시스템부터 디자인까지 한 번에!",
+        "Classification": "BRAND",
+        "heypopPick": false
+    }
+]
