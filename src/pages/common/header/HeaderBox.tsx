@@ -8,6 +8,7 @@ import SearchBoxInner from './SearchBoxInner'
 
 function HeaderBox() {
     const HeaderArea = styled.div`
+        position: fixed;
         background: ${({ theme }) => theme.colors.black};
         z-index: 20000;
         height: 40px;
