@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 
+import Button from '../form/LoadMoreButton'
 import SubListItem from './SubListItem'
 
 const WrapDiv = styled.div`
@@ -9,15 +10,21 @@ const WrapDiv = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     width: auto;
-    max-width: 1057px;
     height: auto;
     margin: auto;
     padding-top: 80px;
-    ${({ theme }) => theme.media.maxTab} {
-        width: ${({ theme }) => theme.vwLap(1057)};
+
+    ${({ theme }) => theme.media.pc} {
+        max-width: 1200px;
+    }
+    ${({ theme }) => theme.media.lap} {
+        width: ${({ theme }) => theme.vwLap(1188)};
+        max-width: 1188px;
+        min-width: 850px;
     }
     ${({ theme }) => theme.media.tab} {
         width: ${({ theme }) => theme.vwTab(800)};
+        max-width: 850px;
     }
     ${({ theme }) => theme.media.mob} {
         width: ${({ theme }) => theme.vwMob(690)};
@@ -28,8 +35,16 @@ interface IProps {
     jsonDataLink: string
 }
 function SubListItemArea({ jsonDataLink }: IProps) {
+    const plusButton: number = 9
     const dataAddress = `./data/${jsonDataLink}`
-    const [data, setData] = useState<any[]>([])
+    const [dataList, setDataList] = useState<any[]>([])
+
+    const [sliderView, setSliderView] = useState<any | any[]>(9)
+    const onClickMoreBtn = () => {
+        setSliderView(sliderView + plusButton)
+    }
+    const viewData = dataList.filter((value, i) => i < sliderView)
+
     const importData = async () => {
         const jsonData = await axios.get(dataAddress, {
             headers: {
@@ -37,17 +52,18 @@ function SubListItemArea({ jsonDataLink }: IProps) {
                 Accept: 'application/json',
             },
         })
-        setData(jsonData.data)
+        setDataList(jsonData.data)
     }
+
     useEffect(() => {
         importData()
     }, [])
+
     return (
         <WrapDiv>
-            {data.map((item) => (
+            {viewData.map((item) => (
                 <SubListItem
-                    // key={item}
-                    key="6"
+                    key={item.indexNum}
                     id={item.id}
                     img={item.img}
                     title={item.title}
@@ -58,6 +74,7 @@ function SubListItemArea({ jsonDataLink }: IProps) {
                     popUp={item.popUp}
                 />
             ))}
+            {dataList.length > 9 && <Button onClick={onClickMoreBtn} />}
         </WrapDiv>
     )
 }

@@ -78,6 +78,7 @@ function HeaderBox() {
         float: right;
         ${({ theme }) => theme.media.pc} {
             left: 0;
+            margin-top: 3px;
             float: left;
         }
         ${({ theme }) => theme.media.mob} {
@@ -94,15 +95,13 @@ function HeaderBox() {
         }
     `
     const MainNavDiv = styled.div`
+        float: right;
+        width: auto;
+        height: auto;
         display: inline-block;
-        text-align: right;
-        ${({ theme }) => theme.media.mob} {
-            display: none;
-        }
-        ${({ theme }) => theme.media.tab} {
-            display: none;
-        }
-        ${({ theme }) => theme.media.lap} {
+        /* text-align: right; */
+        margin-top: 6px;
+        ${({ theme }) => theme.media.minHeader} {
             display: none;
         }
     `
@@ -112,11 +111,6 @@ function HeaderBox() {
     `
     const MainNavListLi = styled(NavListLi)`
         margin-right: 3px;
-        &:hover {
-            color: ${({ theme }) => theme.colors.point};
-            transition-duration: 0.5s;
-            opacity: 1;
-        }
     `
     const MainNavListMenuLi = styled(NavListLi)`
         ${({ theme }) => theme.media.pc} {
@@ -172,8 +166,8 @@ function HeaderBox() {
         width: 100%;
         border-bottom: 2px solid #fff !important;
         padding-bottom: 20px;
-        background-image: url(${process.env
-            .PUBLIC_URL}/images/icon_navi_search.png) !important;
+        /* background-image: url(${process.env
+            .PUBLIC_URL}:string/images/icon_navi_search.png) !important; */
         background-size: 40px 40px !important;
         background-repeat: no-repeat !important;
         background-position: 0 -5px !important;
@@ -289,6 +283,10 @@ function HeaderBox() {
         word-break: keep-all;
         color: ${({ theme }) => theme.colors.white};
         text-decoration: none;
+        &:hover {
+            color: ${({ theme }) => theme.colors.point};
+            transition-duration: 0.5s;
+        }
     `
 
     const [showSearchBox, setShowSearchBox] = useState(false)
@@ -376,21 +374,41 @@ function HeaderBox() {
                                         Design,
                                     </StyledLink>
                                 </MainNavListLi>
-                                <MainNavListLi>Art,</MainNavListLi>
-                                <MainNavListLi>Living,</MainNavListLi>
-                                <MainNavListLi>Style,</MainNavListLi>
-                                <MainNavListLi>Food,</MainNavListLi>
-                                <MainNavListLi>Stories,</MainNavListLi>
-                                <MainNavListLi>Store,</MainNavListLi>
-                                <MainNavListLi>About,</MainNavListLi>
                                 <MainNavListLi>
-                                    <span
-                                        role="none"
-                                        onClick={newsletterPopupToggle}
-                                        onKeyDown={newsletterPopupToggle}
-                                    >
-                                        Newsletter
-                                    </span>
+                                    <StyledLink to="/art">Art,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/living">
+                                        Living,
+                                    </StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/style">Style,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/food">Food,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/stories">
+                                        Stories,
+                                    </StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/store">Store,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/about">About,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/newsletter">
+                                        <span
+                                            role="none"
+                                            onClick={newsletterPopupToggle}
+                                            onKeyDown={newsletterPopupToggle}
+                                        >
+                                            Newsletter
+                                        </span>
+                                    </StyledLink>
                                 </MainNavListLi>
                             </MainNavUl>
                         </MainNavDiv>
@@ -437,21 +455,42 @@ function HeaderBox() {
                                 <StyledLink to="/design">
                                     <MainNavListLi>Design,</MainNavListLi>
                                 </StyledLink>
-                                <MainNavListLi>Art,</MainNavListLi>
-                                <MainNavListLi>Living,</MainNavListLi>
-                                <MainNavListLi>Style,</MainNavListLi>
-                                <MainNavListLi>Food,</MainNavListLi>
-                                <MainNavListLi>Stories,</MainNavListLi>
-                                <MainNavListLi>Store,</MainNavListLi>
-                                <MainNavListLi>About,</MainNavListLi>
                                 <MainNavListLi>
-                                    <span
-                                        role="none"
-                                        onClick={newsletterPopupToggle}
-                                        onKeyDown={newsletterPopupToggle}
-                                    >
-                                        Newsletter
-                                    </span>
+                                    <StyledLink to="/art">Art,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/living">
+                                        Living,
+                                    </StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/style">Style,</StyledLink>
+                                    Style,
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/food">Food,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/stories">
+                                        Stories,
+                                    </StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/store">Store,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/about">About,</StyledLink>
+                                </MainNavListLi>
+                                <MainNavListLi>
+                                    <StyledLink to="/newsletter">
+                                        <span
+                                            role="none"
+                                            onClick={newsletterPopupToggle}
+                                            onKeyDown={newsletterPopupToggle}
+                                        >
+                                            Newsletter
+                                        </span>
+                                    </StyledLink>
                                 </MainNavListLi>
                             </MainNavUl>
                         </MenuUlPartDiv>

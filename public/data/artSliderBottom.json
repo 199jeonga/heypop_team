@@ -1,0 +1,22 @@
+[
+    {
+        "id": "art3",
+        "indexNum": 3,
+        "imgBig": "https://storage.heypop.kr/assets/2022/06/16101201/t-17.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/06/16101201/t-17.jpg",
+        "title": "한 편의 동화 같은 페이퍼아트",
+        "subtitle": "전시 <Paper Tale>",
+        "category": "Art",
+        "link": "https://heypop.kr/n/34198"
+    },
+    {
+        "id": "art4",
+        "indexNum": 4,
+        "imgBig": "https://storage.heypop.kr/assets/2022/06/17172701/t-23.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/06/17172711/mt-22.jpg",
+        "title": "마음이 보여주는 몽글몽글한 그것, 홍시야 그림",
+        "subtitle": "평면 그림으로 4차원 시공간을 그리다",
+        "category": "Art",
+        "link": "hhttps://heypop.kr/n/34768"
+    }
+]

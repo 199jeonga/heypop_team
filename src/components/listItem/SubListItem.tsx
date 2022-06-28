@@ -9,9 +9,16 @@ const WrapDiv = styled.div`
     position: relative;
     height: auto;
     padding-bottom: 60px;
-    ${({ theme }) => theme.media.maxTab} {
+    ${({ theme }) => theme.media.minTab} {
         width: ${({ theme }) => theme.vwLap(518)};
         max-width: 518px;
+    }
+    ${({ theme }) => theme.media.lap} {
+        width: ${({ theme }) => theme.vwLap(570)};
+    }
+    ${({ theme }) => theme.media.pc} {
+        width: ${({ theme }) => theme.vwTab(380)};
+        max-width: 380px;
     }
     img {
         width: 100%;

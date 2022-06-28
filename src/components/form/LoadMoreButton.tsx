@@ -3,15 +3,15 @@ import styled from 'styled-components'
 import { IoIosArrowDown } from 'react-icons/io'
 
 const WrapDiv = styled.div`
-    width: 150px;
+    width: 100%;
     height: 100px;
-    margin: auto;
-    margin: auto;
     button {
-        width: auto;
+        width: 150px;
         height: auto;
         position: relative;
         background-color: transparent;
+        margin-left: 50%;
+        transform: translateX(-50%);
         border: none;
         transition: all 300ms ease-in-out;
         &:hover {
@@ -35,10 +35,13 @@ const WrapDiv = styled.div`
         font-size: 24px;
     }
 `
-function LoadMoreButton() {
+interface iProps {
+    onClick: () => void
+}
+function LoadMoreButton({ onClick }: iProps) {
     return (
         <WrapDiv>
-            <button type="button">
+            <button type="button" onClick={onClick}>
                 <span>Load More</span>
                 <i>
                     <IoIosArrowDown />
