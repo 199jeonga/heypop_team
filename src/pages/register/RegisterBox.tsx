@@ -29,56 +29,47 @@ function RegisterBox() {
     // const dispatch = useDispatch()
 
     const onNicknameHandle = (e: any) => {
-        setNickName(e.currentTarget.value)
+        setNickName(e.target.value)
     }
     const onEmailHandle = (e: any) => {
-        setEmail(e.currentTarget.value)
+        setEmail(e.target.value)
     }
     const onMobilenumberHandle = (e: any) => {
-        setMobileNumber(e.currentTarget.value)
+        setMobileNumber(e.target.value)
     }
     const onBirthdayHandle = (e: any) => {
-        setBirthDay(e.currentTarget.value)
+        setBirthDay(e.target.value)
     }
     const onPasswordHandle = (e: any) => {
-        setUsePassword(e.currentTarget.value)
+        setUsePassword(e.target.value)
     }
     const onConfirmpasswordHandle = (e: any) => {
-        setConfirmUsePassword(e.currentTarget.value)
+        setConfirmUsePassword(e.target.value)
     }
     const onSubmitHandler = (e: any) => {
         e.preventDefault()
-        if (UsePassword === ConfirmUsePassword) {
-            //         dispatch(registerUser(body)).then(() => {
-            //             alert(
-            //                 '가입이 정상적으로 완료되었습니다. 로그인 창으로 이동하는 기능도 넣어요~!'
-            //             )
-            //         })
-            //     } else {
-            //         alert('비밀번호가 일치하지 않습니다')
-            //     }
-            // const body = {
-            //     email: Email,
-            //     nickName: NickName,
-            //     phoneNumber: MobileNumber,
-            //     birthDate: BirthDay,
-            //     password: UsePassword,
-            // }
-            const DOMAIN = 'http://15.164.164.238:8080'
-            axios({
-                method: 'post',
-                url: `${DOMAIN}/user`,
-                data: {
-                    email: Email,
-                    password: UsePassword,
-                    nickName: NickName,
-                    phoneNumber: MobileNumber,
-                    birthDate: BirthDay,
-                },
-            })
-                .then((res) => res.data)
-                .catch((err) => console.log(err))
+        if (UsePassword !== ConfirmUsePassword) {
+            alert('비밀번호가 다르게 입력되었습니다. 다시 확인해 주세요.')
+            return
         }
+        axios({
+            method: 'post',
+            url: 'http://15.164.164.238:8080/user',
+            data: {
+                email: Email,
+                password: UsePassword,
+                nickName: NickName,
+                phoneNumber: MobileNumber,
+                birthDate: BirthDay,
+            },
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then((res) => res.data)
+            .catch((error) => {
+                console.log(error)
+            })
     }
     return (
         <WrapForm onSubmit={onSubmitHandler}>

@@ -2,27 +2,49 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import HeyPopPick from './SubListItemArea'
+import HeyPopPick from './SubPickHeypopPick'
+import Closed from './SubClosed'
 
 const WrapDiv = styled.div`
-    width: 100%;
+    position: relative;
+    height: auto;
+    padding-bottom: 60px;
+    ${({ theme }) => theme.media.minTab} {
+        width: ${({ theme }) => theme.vwLap(518)};
+        max-width: 518px;
+    }
+    ${({ theme }) => theme.media.lap} {
+        width: ${({ theme }) => theme.vwLap(570)};
+    }
+    ${({ theme }) => theme.media.pc} {
+        width: ${({ theme }) => theme.vwTab(380)};
+        max-width: 380px;
+    }
     img {
-        width: 380px;
+        width: 100%;
         height: auto;
-        ${({ theme }) => theme.media.lap} {
-            width: 96%;
-            height: auto;
+        &:hover {
+            transition: all 400ms ease;
+            filter: opacity(0.7);
         }
-        ${({ theme }) => theme.media.minTab} {
-            width: 98%;
-            height: auto;
-        }
+    }
+`
+const PickDiv = styled.div`
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    margin-bottom: 4px;
+    ${({ theme }) => theme.media.minTab} {
+        ${({ theme }) => theme.styles.blind}
     }
 `
 const ContentDiv = styled.div`
     width: 100%;
     height: auto;
-    margin: 20px 0 24px;
+    margin: 20px 0 44px;
+    ${({ theme }) => theme.media.minTab} {
+        margin-bottom: 34px;
+    }
     h5 {
         width: 100%;
         height: auto;
@@ -53,7 +75,9 @@ const StyledLink = styled(Link)`
     text-transform: uppercase;
     &:hover {
         transition: all 400ms ease;
-        filter: opacity(0.7);
+        color: ${({ theme }) => theme.colors.point};
+        text-decoration: underline;
+        text-underline-position: under;
     }
 `
 interface Iprops {
@@ -62,11 +86,27 @@ interface Iprops {
     title?: string
     subtitle?: string
     Classification?: string
+    heypopPick?: boolean
+    closed?: boolean
+    popUp?: boolean
 }
-function SliderInner({ id, img, title, subtitle, Classification }: Iprops) {
+function SliderInner({
+    id,
+    img,
+    title,
+    subtitle,
+    Classification,
+    heypopPick,
+    closed,
+    popUp,
+}: Iprops) {
     return (
         <WrapDiv>
-            <HeyPopPick />
+            <PickDiv>
+                {heypopPick && <HeyPopPick text="heypop pick" />}
+                {popUp && <HeyPopPick text="pop-up-" />}
+                {closed && <Closed />}
+            </PickDiv>
             <StyledLink
                 to={`${process.env.PUBLIC_URL}/${Classification}/${id}`}
             >

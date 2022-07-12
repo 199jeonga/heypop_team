@@ -5,6 +5,7 @@ import Register from 'routes/Register'
 import Login from 'routes/Login'
 import NaverCallback from 'routes/NaverCallback'
 import Design from 'routes/Design'
+import Art from 'routes/Art'
 import GlobalStyles from 'GlobalStyles'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/navercallback" element={<NaverCallback />} />
                 <Route path="/design" element={<Design />} />
+                <Route path="/art" element={<Art />} />
             </Routes>
         </Router>
     )
