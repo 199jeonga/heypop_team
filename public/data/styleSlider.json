@@ -1,0 +1,22 @@
+[
+    {
+        "id": "style1",
+        "indexNum": 1,
+        "imgBig": "https://storage.heypop.kr/assets/2022/07/06141756/t-5.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/07/06141805/mt-6.jpg",
+        "title": "의류브랜드 피그먼트가 만든 복합문화공간",
+        "subtitle": "성수 피그먼트 플래그쉽 스토어",
+        "category": "Style",
+        "link": "https://heypop.kr/n/34763"
+    },
+    {
+        "id": "style2",
+        "indexNum": 2,
+        "imgBig": "https://storage.heypop.kr/assets/2022/07/04165350/t-1.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/07/04165359/mt-1.jpg",
+        "title": "이태원에 상륙한 룰루레몬 스토어",
+        "subtitle": "국내 최대 규모, 하이크 컬렉션 선공개",
+        "category": "Style",
+        "link": "hhttps://heypop.kr/n/34768"
+    }
+]

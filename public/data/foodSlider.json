@@ -1,0 +1,22 @@
+[
+    {
+        "id": "food1",
+        "indexNum": 1,
+        "imgBig": "https://storage.heypop.kr/assets/2022/07/04182507/t-2.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/07/04182518/mt-2.jpg",
+        "title": "코카콜라 크리에디션, 두번째 프로젝트 공개",
+        "subtitle": "그래미상 후보와 함께한 '코카콜라 제로 Marshmello'",
+        "category": "Food",
+        "link": "https://heypop.kr/n/34763"
+    },
+    {
+        "id": "food2",
+        "indexNum": 2,
+        "imgBig": "https://storage.heypop.kr/assets/2022/06/30185849/t-44.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/06/30185900/mt-41.jpg",
+        "title": "풀무원의 비건 레스토랑 '플랜튜드'",
+        "subtitle": "100% 식물성으로 누구나 맛있게 즐기는 비거니즘!",
+        "category": "Food",
+        "link": "hhttps://heypop.kr/n/34768"
+    }
+]

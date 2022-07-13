@@ -6,6 +6,9 @@ import Login from 'routes/Login'
 import NaverCallback from 'routes/NaverCallback'
 import Design from 'routes/Design'
 import Art from 'routes/Art'
+import Living from 'routes/Living'
+import Style from 'routes/Style'
+import Food from 'routes/Food'
 import GlobalStyles from 'GlobalStyles'
 
 function App() {
@@ -37,6 +40,18 @@ function App() {
                 <Route
                     path={`${process.env.PUBLIC_URL}/art`}
                     element={<Art />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/living`}
+                    element={<Living />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/style`}
+                    element={<Style />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/food`}
+                    element={<Food />}
                 />
             </Routes>
         </Router>

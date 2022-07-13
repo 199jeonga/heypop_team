@@ -1,0 +1,22 @@
+[
+    {
+        "id": "living1",
+        "indexNum": 1,
+        "imgBig": "https://storage.heypop.kr/assets/2022/07/06135111/t-4.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/07/06135111/t-4.jpg",
+        "title": "호텔 더일마와 멧앤멜이 선사하는 호캉스",
+        "subtitle": "팝업 <POP>",
+        "category": "Living",
+        "link": "https://heypop.kr/n/34763"
+    },
+    {
+        "id": "living2",
+        "indexNum": 2,
+        "imgBig": "https://storage.heypop.kr/assets/2022/06/01220935/t-45.jpg",
+        "imgMin": "https://storage.heypop.kr/assets/2022/06/01220952/mt-42.jpg",
+        "title": "맹그로브부동산에서 집알아보세요!",
+        "subtitle": "맹그로브 동대문, 입주 팝업 행사",
+        "category": "Living",
+        "link": "hhttps://heypop.kr/n/34768"
+    }
+]

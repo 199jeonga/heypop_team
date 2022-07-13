@@ -72,6 +72,7 @@ type SliderProps = {
 
 function SliderBox({ jsonDataLink, padding }: SliderProps) {
     const dataAddress = `./data/${jsonDataLink}`
+    // const dataAddress = `${process.env.PUBLIC_URL}/data/${jsonDataLink}`
     const [data, setData] = useState<any[]>([])
     const importData = async () => {
         const jsonData = await axios.get(dataAddress, {
