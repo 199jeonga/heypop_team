@@ -60,9 +60,11 @@ function SearchBoxInner() {
             </StyledLink>
             <StyledDivText>
                 <h5>
-                    <StyledLink to="/">PLACE</StyledLink>
+                    <StyledLink to={`${process.env.PUBLIC_URL}/`}>
+                        PLACE
+                    </StyledLink>
                 </h5>
-                <StyledLink to="/">
+                <StyledLink to={`${process.env.PUBLIC_URL}/`}>
                     <span>성수에서 만난 작업하기 좋은 카페 5</span>
                 </StyledLink>
             </StyledDivText>

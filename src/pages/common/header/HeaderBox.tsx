@@ -318,7 +318,7 @@ function HeaderBox() {
             )}
             <HeaderInnerDiv>
                 <HeaderMenuPartDiv>
-                    <StyledLink to="/">
+                    <StyledLink to={`${process.env.PUBLIC_URL}/`}>
                         <HomeIconImg
                             alt="home"
                             src={`${process.env.PUBLIC_URL}/images/icon_home.png`}
@@ -328,10 +328,18 @@ function HeaderBox() {
                     <MenuNavUlDiv>
                         <SubNavUl>
                             <NavListLi>
-                                <StyledLink to="/login">LOGIN</StyledLink>
+                                <StyledLink
+                                    to={`${process.env.PUBLIC_URL}/login`}
+                                >
+                                    LOGIN
+                                </StyledLink>
                             </NavListLi>
                             <NavListLi>
-                                <StyledLink to="/register">SIGNUP</StyledLink>
+                                <StyledLink
+                                    to={`${process.env.PUBLIC_URL}/register`}
+                                >
+                                    SIGNUP
+                                </StyledLink>
                             </NavListLi>
                             <NavListLi>
                                 <span
@@ -371,37 +379,65 @@ function HeaderBox() {
                         <MainNavDiv>
                             <MainNavUl>
                                 <MainNavListLi>
-                                    <StyledLink to="/design">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/design`}
+                                    >
                                         Design,
                                     </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/art">Art,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/art`}
+                                    >
+                                        Art,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/living">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/living`}
+                                    >
                                         Living,
                                     </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/style">Style,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/style`}
+                                    >
+                                        Style,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/food">Food,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/food`}
+                                    >
+                                        Food,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/stories">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/stories`}
+                                    >
                                         Stories,
                                     </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/store">Store,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/store`}
+                                    >
+                                        Store,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/about">About,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/about`}
+                                    >
+                                        About,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/newsletter">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/newsletter`}
+                                    >
                                         <span
                                             role="none"
                                             onClick={newsletterPopupToggle}
@@ -453,37 +489,65 @@ function HeaderBox() {
                     <MenuInnerDiv>
                         <MenuUlPartDiv>
                             <MainNavUl>
-                                <StyledLink to="/design">
+                                <StyledLink
+                                    to={`${process.env.PUBLIC_URL}/design`}
+                                >
                                     <MainNavListLi>Design,</MainNavListLi>
                                 </StyledLink>
                                 <MainNavListLi>
-                                    <StyledLink to="/art">Art,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/art`}
+                                    >
+                                        Art,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/living">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/living`}
+                                    >
                                         Living,
                                     </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/style">Style,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/style`}
+                                    >
+                                        Style,
+                                    </StyledLink>
                                     Style,
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/food">Food,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/food`}
+                                    >
+                                        Food,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/stories">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/stories`}
+                                    >
                                         Stories,
                                     </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/store">Store,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/store`}
+                                    >
+                                        Store,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/about">About,</StyledLink>
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/about`}
+                                    >
+                                        About,
+                                    </StyledLink>
                                 </MainNavListLi>
                                 <MainNavListLi>
-                                    <StyledLink to="/newsletter">
+                                    <StyledLink
+                                        to={`${process.env.PUBLIC_URL}/newsletter`}
+                                    >
                                         <span
                                             role="none"
                                             onClick={newsletterPopupToggle}

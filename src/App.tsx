@@ -13,13 +13,31 @@ function App() {
         <Router>
             <GlobalStyles />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/heypop_team" element={<Home />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/navercallback" element={<NaverCallback />} />
-                <Route path="/design" element={<Design />} />
-                <Route path="/art" element={<Art />} />
+                <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/heypop_team`}
+                    element={<Home />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/register`}
+                    element={<Register />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/login`}
+                    element={<Login />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/navercallback`}
+                    element={<NaverCallback />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/design`}
+                    element={<Design />}
+                />
+                <Route
+                    path={`${process.env.PUBLIC_URL}/art`}
+                    element={<Art />}
+                />
             </Routes>
         </Router>
     )
