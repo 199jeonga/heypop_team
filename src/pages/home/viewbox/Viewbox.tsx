@@ -46,39 +46,12 @@ function Viewbox() {
             color: ${({ theme }) => theme.colors.black};
         }
     `
-    const LogoImg = styled.div`
-        width: auto;
-        height: auto;
-        ${({ theme }) => theme.media.mob} {
-            display: flex;
-            justify-content: center;
-        }
-        img {
-            width: auto;
-            max-width: 360px;
-            height: auto;
-            padding-left: 20px;
-            ${({ theme }) => theme.media.tab} {
-                width: ${({ theme }) => theme.vwTab(340)};
-            }
-            ${({ theme }) => theme.media.mob} {
-                width: ${({ theme }) => theme.vwMob(340)};
-            }
-        }
-    `
-
     return (
         <WrapDiv>
             <ContentP>
                 <span>DISCOVER YOUR FAVORITES</span>
                 <span>WITH CREATOR, BY CURATOR, FROM BRAND</span>
             </ContentP>
-            <LogoImg>
-                <img
-                    src="https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg"
-                    alt="heypop"
-                />
-            </LogoImg>
         </WrapDiv>
     )
 }

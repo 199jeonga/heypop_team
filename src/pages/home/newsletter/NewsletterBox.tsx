@@ -18,9 +18,8 @@ function NewsletterBox() {
         }
     `
     const NewsLetterInnerDiv = styled.div`
-        padding-left: 60%;
+        padding-left: 55%;
         height: 100%;
-        background-image: url(https://storage.oneslist.com/assets/2021/11/12171535/Logo-2.svg);
         background-repeat: no-repeat;
         margin-top: 50px;
         background-size: 62.5% auto;

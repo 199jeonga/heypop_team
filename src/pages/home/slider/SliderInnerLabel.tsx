@@ -16,28 +16,6 @@ const WrapDiv = styled.div`
         transform: translateX(50%);
     }
 `
-const LogoDiv = styled.div`
-    float: left;
-    width: 80px;
-    height: 100%;
-    padding: 23px 1px;
-    background-color: ${({ theme }) => theme.colors.black};
-    ${({ theme }) => theme.media.mob} {
-        width: auto;
-        height: auto;
-        padding: 12px 10px;
-    }
-    img {
-        width: 44px;
-        height: auto;
-        ${({ theme }) => theme.styles.center}
-        filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(191deg)
-            brightness(400%) contrast(100%);
-        ${({ theme }) => theme.media.mob} {
-            width: 30px;
-        }
-    }
-`
 const TextDiv = styled.div`
     float: left;
     width: auto;
@@ -54,12 +32,6 @@ const TextDiv = styled.div`
 function SliderInnerLabel({ category }: any) {
     return (
         <WrapDiv>
-            <LogoDiv>
-                <img
-                    src={`${process.env.PUBLIC_URL}/images/logo.svg`}
-                    alt="헤이팝"
-                />
-            </LogoDiv>
             <TextDiv> {category} </TextDiv>
         </WrapDiv>
     )
